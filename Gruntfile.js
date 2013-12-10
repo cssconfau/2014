@@ -48,14 +48,13 @@ module.exports = function(grunt) {
             src : ['*.css', '!*prefixed.css'],
             cwd : 'dist/css',
             dest : 'dist/css',
-            ext : '.prefixed.css',
             expand : true
           }
         ]
       }
     },
     cssmin: {
-      unprefixed: {
+      prefixed: {
         src: 'dist/css/2014.css',
         dest: 'dist/css/2014.min.css'
       }
@@ -87,7 +86,7 @@ module.exports = function(grunt) {
   });
 
   // Compile CSS
-  grunt.registerTask('css', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess', 'cssmin']);
+  grunt.registerTask('css', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess']);
 
   // Default task.
   grunt.registerTask('default', ['css']);
