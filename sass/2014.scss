@@ -6,6 +6,7 @@
 html, body, h1 {
   padding: 0;
   margin: 0;
+  line-height: 1.3;
   box-sizing: border-box;
 }
 
@@ -53,6 +54,7 @@ article {
   }
 
   .summary {
+    margin-bottom: -1rem;
     font-size: $big-body-font-size;
   }
 
@@ -74,7 +76,7 @@ article {
     color: $dark-orange;
     background-color: $bright-orange;
     border-radius: 4px;
-    .limited { margin-top: 0; margin-right: 2em; }
+    .limited { margin-top: 0; margin-right: 2em; line-height: 1.25; }
     p strong {
       font-size: $big-body-font-size;
       font-weight: normal;
