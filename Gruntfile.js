@@ -10,15 +10,15 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    clean: ['dist/*.css'],
+    clean: ['dist/css/*'],
     watch: {
       files: ['sass/*.scss'],
-      tasks: ['sass']
+      tasks: ['css']
     },
     sass: {
       main: {
         files: {
-          'dist/application.css': 'sass/application.scss'
+          'dist/css/2014.css': 'sass/2014.scss'
         }
       }
     },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         csslintrc: '.csslintrc'
       },
       dist: {
-        src: ['dist/*.css']
+        src: ['dist/css/*.css']
       }
     },
     recess: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         options: {
           noOverqualifying: false
         },
-        src: ['dist/application.css']
+        src: ['dist/css/2014.css']
       }
     },
     autoprefixer: {
@@ -45,9 +45,9 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src : ['**/*.css', '!**/*prefixed.css'],
-            cwd : 'dist',
-            dest : 'dist',
+            src : ['*.css', '!*prefixed.css'],
+            cwd : 'dist/css',
+            dest : 'dist/css',
             ext : '.prefixed.css',
             expand : true
           }
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
     },
     cssmin: {
       unprefixed: {
-        src: 'dist/application.css',
-        dest: 'dist/application.min.css'
+        src: 'dist/css/2014.css',
+        dest: 'dist/css/2014.min.css'
       }
     },
     s3: {
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       dist: {
         upload: [
           {
-            src: 'dist/*.css',
+            src: 'dist/*',
             dest: './'
           }
         ]
@@ -86,8 +86,11 @@ module.exports = function(grunt) {
     }
   });
 
+  // Compile CSS
+  grunt.registerTask('css', ['sass', 'autoprefixer', 'csslint', 'recess', 'cssmin']);
+
   // Default task.
-  grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess', 'cssmin']);
+  grunt.registerTask('default', ['clean', 'css']);
 
   // Use for development
   grunt.registerTask('dev', ['connect', 'watch']);
