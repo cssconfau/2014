@@ -2,12 +2,12 @@ input[type='email'], input[type='submit'] {
   display: block;
   width: 100%;
   padding: .75rem 1rem;
-  font: 300 $body-font-size $text-font-family;
+  font: 300 $body-font-size/1 $text-font-family;
   color: white;
   background-color: $dark-orange;
   border: none;
   box-shadow: none;
-  transition: 200ms;
+  transition: background-color 200ms;
   -webkit-appearance: none;
   &:focus {
     outline: none;
@@ -18,7 +18,7 @@ input[type='email'], input[type='submit'] {
 input[type='email'] {
   &::placeholder {
     color: $light-dark-orange;
-    transition: 200ms;
+    transition: color 200ms;
   }
   &:hover {
     &::placeholder {
@@ -29,6 +29,8 @@ input[type='email'] {
 
 input[type='submit'] {
   width: auto;
+  font-family: $heading-font-family;
   font-style: italic;
+  font-weight: 300;
   cursor: pointer;
 }

@@ -1,5 +1,6 @@
 // Colors
 
+$very-light-text-color: $lighter-grey;
 $light-text-color: $grey;
 $text-color: $dark-orange;
 $heading-color: $bright-orange;
@@ -7,16 +8,18 @@ $heading-color: $bright-orange;
 $link-color: $orange;
 $link-hover-color: $bright-orange;
 
-$link-on-orange-color: $tinted-white;
-$link-on-orange-hover-color: white;
+$link-on-orange-color: $slighty-lighter-dark-orange;
+$link-on-orange-hover-color: $lighter-dark-orange;
 
 // Families
 
-$text-font-family: 'Adobe Garamond Pro';
+$text-font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+$heading-font-family: 'Hoefler Titling A', 'Hoefler Titling B', serif;
+$heading-font-family-swash: 'Hoefler Titling Swash A', 'Hoefler Titling Swash B', serif;
 
 // Sizes
 
-$body-font-size: 1.4rem;
+$body-font-size: 1.3rem;
 $big-body-font-size: 2.15rem;
 $small-body-font-size: 1.25rem;
 
@@ -25,13 +28,17 @@ $small-body-font-size: 1.25rem;
 %body-font {
   font-family: $text-font-family;
   font-size: $body-font-size;
+  line-height: 1.5;
   color: $text-color;
 }
 
-%heading-font {
+%feature-font {
+  font-family: $heading-font-family;
   font-style: italic;
   font-weight: 300;
-  color: $bright-orange;
+  &:first-letter {
+    font-family: $heading-font-family-swash;
+  }
 }
 
 %link-on-orange {
