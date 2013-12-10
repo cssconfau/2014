@@ -3,5 +3,6 @@
   "compatible-vendor-prefixes": false,
   "universal-selector": false,
   "box-sizing": false,
-  "unique-headings": false
+  "unique-headings": false,
+  "box-model": false
 }

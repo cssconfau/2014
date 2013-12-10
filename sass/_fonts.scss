@@ -3,8 +3,12 @@
 $light-text-color: $grey;
 $text-color: $dark-orange;
 $heading-color: $bright-orange;
+
 $link-color: $orange;
 $link-hover-color: $bright-orange;
+
+$link-on-orange-color: $tinted-white;
+$link-on-orange-hover-color: white;
 
 // Families
 
@@ -28,4 +32,11 @@ $small-body-font-size: 1.25rem;
   font-style: italic;
   font-weight: 300;
   color: $bright-orange;
+}
+
+%link-on-orange {
+  color: $link-on-orange-color;
+  &:hover {
+    color: $link-on-orange-hover-color;
+  }
 }
