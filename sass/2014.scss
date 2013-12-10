@@ -1,6 +1,7 @@
 @import "colors";
 @import "fonts";
 @import "layout";
+@import "responsive_images";
 
 html, body, h1 { padding: 0; margin: 0; box-sizing: border-box; }
 p { margin: 1rem 0; }
@@ -22,6 +23,7 @@ header {
   text-align: center;
   background-color: black;
   .page-width { @extend %page-width; }
+  .image { @include responsive-image-container(565px,84px); }
 }
 
 article {
@@ -33,6 +35,7 @@ article {
   }
   .mm-photo {
     margin: 2rem 0;
+    .image { @include responsive-image-container(1000px,682px); }
     p {
       margin-top: .5rem;
       font-size: 1.25rem;

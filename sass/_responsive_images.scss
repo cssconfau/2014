@@ -1,0 +1,14 @@
+// This helps to prevent content moving around during page load by ensuring
+// the the image (using a container) always has a height, even when using
+// proportional/responsive widths.
+@mixin responsive-image-container($width, $height) {
+  $top-padding: ($height / $width) * 100%;
+  position: relative;
+  height: 0;
+  padding-top: $top-padding;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
