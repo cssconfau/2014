@@ -61,10 +61,12 @@ module.exports = function(grunt) {
     },
     s3: {
       options: {
-        key: s3Credentials.key,
+        key:    s3Credentials.key,
         secret: s3Credentials.secret,
         bucket: 'cssconf.com.au',
-        access: 'public-read'
+        access: 'public-read',
+        gzip:   true,
+        gzipExclude: ['.jpg', '.png']
       },
       dist: {
         upload: [
