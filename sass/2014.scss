@@ -3,9 +3,16 @@
 @import "layout";
 
 html, body, h1 { padding: 0; margin: 0; box-sizing: border-box; }
+p { margin: 1rem 0; }
 
 body {
   @extend %body-font;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover { color: $link-hover-color; }
 }
 
 header {
@@ -15,4 +22,12 @@ header {
   background-color: black;
   .logo { @extend %page-width; }
   img { width: 100%; }
+}
+
+article {
+  @extend %page-width;
+  margin-top: 2rem;
+  .summary {
+    font-size: 2rem;
+  }
 }

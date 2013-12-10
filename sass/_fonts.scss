@@ -2,6 +2,8 @@
 
 $text-color-on-white: $dark-orange;
 $heading-color-on-white: $bright-orange;
+$link-color: $orange;
+$link-hover-color: $bright-orange;
 
 // Families
 
@@ -11,6 +13,7 @@ $text-font-family: 'Adobe Garamond Pro';
 
 %body-font {
   font-family: $text-font-family;
+  font-size: 1.5rem;
   color: $text-color-on-white;
 }
 
