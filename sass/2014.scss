@@ -37,7 +37,7 @@ article {
     margin: 2rem 0;
     .image { @include responsive-image-container(1000px,682px); }
     p {
-      margin-top: .5rem;
+      margin-top: 1rem;
       font-size: 1.25rem;
       color: $light-text-color;
       text-align: right;
