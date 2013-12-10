@@ -1,1 +1,10 @@
-body { transition: all 500ms; }
+@import "colors";
+@import "fonts";
+
+body {
+  @extend %body-font;
+}
+
+h1 {
+  @extend %heading-font;
+}

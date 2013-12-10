@@ -1,0 +1,21 @@
+// Colors
+
+$text-color-on-white: $dark-orange;
+$heading-color-on-white: $bright-orange;
+
+// Families
+
+$text-font-family: 'Adobe Garamond Pro';
+
+// Shared styles
+
+%body-font {
+  font-family: $text-font-family;
+  color: $text-color-on-white;
+}
+
+%heading-font {
+  font-style: italic;
+  font-weight: 300;
+  color: $bright-orange;
+}
