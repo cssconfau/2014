@@ -3,9 +3,27 @@
 @import "layout";
 @import "responsive_images";
 
-html, body, h1 { padding: 0; margin: 0; box-sizing: border-box; }
-p { margin: 1rem 0; }
-img { width: 100%; }
+html, body, h1 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  margin: 1rem 0;
+  font-size: $big-body-font-size;
+  font-style: italic;
+  font-weight: 400;
+  color: $grey;
+}
 
 body {
   @extend %body-font;
@@ -29,18 +47,38 @@ header {
 article {
   @extend %page-width;
   margin-bottom: 7.5rem;
-  .summary {
-    margin: 2rem 0 1.5rem;
-    font-size: 1.75rem;
+
+  section {
+    margin: 3rem 0;
   }
-  .mm-photo {
-    margin: 2rem 0;
-    .image { @include responsive-image-container(1000px,682px); }
-    p {
-      margin-top: 1rem;
-      font-size: 1.25rem;
-      color: $light-text-color;
-      text-align: right;
+
+  .summary {
+    font-size: $big-body-font-size;
+  }
+
+  .details {
+    .photo {
+      margin: 2rem 0;
+      .image { @include responsive-image-container(1000px,682px); }
+      p {
+        margin-top: 1rem;
+        font-size: $small-body-font-size;
+        color: $light-text-color;
+        text-align: right;
+      }
     }
   }
+
+  .subscribe {
+    padding: 2rem 1.5rem;
+    color: $dark-orange;
+    background-color: $bright-orange;
+    border-radius: 4px;
+    .limited { margin-top: 0; margin-right: 2em; }
+    p strong {
+      font-size: $big-body-font-size;
+      font-weight: normal;
+    }
+  }
+
 }

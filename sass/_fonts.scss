@@ -10,11 +10,17 @@ $link-hover-color: $bright-orange;
 
 $text-font-family: 'Adobe Garamond Pro';
 
+// Sizes
+
+$body-font-size: 1.4rem;
+$big-body-font-size: 2.15rem;
+$small-body-font-size: 1.25rem;
+
 // Shared styles
 
 %body-font {
   font-family: $text-font-family;
-  font-size: 1.4rem;
+  font-size: $body-font-size;
   color: $text-color;
 }
 
