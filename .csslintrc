@@ -1,4 +1,7 @@
 {
   "adjoining-classes": false,
-  "compatible-vendor-prefixes": false
+  "compatible-vendor-prefixes": false,
+  "universal-selector": false,
+  "box-sizing": false,
+  "unique-headings": false
 }
