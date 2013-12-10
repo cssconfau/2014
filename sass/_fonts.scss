@@ -14,6 +14,7 @@ $link-on-orange-hover-color: $lighter-dark-orange;
 // Families
 
 $text-font-family: 'Hoefler Text A', 'Hoefler Text B', serif;
+$text-font-family-small-caps: 'Hoefler Text Small Caps A', 'Hoefler Text Small Caps B', serif;
 $heading-font-family: 'Hoefler Titling A', 'Hoefler Titling B', serif;
 $heading-font-family-swash: 'Hoefler Titling Swash A', 'Hoefler Titling Swash B', serif;
 
@@ -39,6 +40,13 @@ $small-body-font-size: 1.25rem;
   &:first-letter {
     font-family: $heading-font-family-swash;
   }
+}
+
+%subheading-font {
+  font-family: $text-font-family-small-caps;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: lowercase;
 }
 
 %link-on-orange {
