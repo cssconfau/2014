@@ -87,10 +87,10 @@ module.exports = function(grunt) {
   });
 
   // Compile CSS
-  grunt.registerTask('css', ['sass', 'autoprefixer', 'csslint', 'recess', 'cssmin']);
+  grunt.registerTask('css', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess', 'cssmin']);
 
   // Default task.
-  grunt.registerTask('default', ['clean', 'css']);
+  grunt.registerTask('default', ['css']);
 
   // Use for development
   grunt.registerTask('dev', ['connect', 'watch']);
