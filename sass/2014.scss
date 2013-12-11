@@ -47,7 +47,7 @@ header {
   .image { @include responsive-image-container(565px,84px); }
 }
 
-article {
+article.announcement {
   @extend %page-width;
   margin-bottom: 7.5rem;
 
