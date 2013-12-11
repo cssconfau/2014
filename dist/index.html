@@ -90,7 +90,7 @@
     <script>
       // Fix up obscured mailto links
       (function(links) {
-        var domain = window.location.host, placeholder = 'THISDOMAIN';
+        var domain = 'cssconf.com.au', placeholder = 'THISDOMAIN';
         for (var i = 0; i < links.length; i++) {
           links[i].href = links[i].href.replace(placeholder, domain);
           links[i].innerText = links[i].innerText.replace(placeholder, domain);
