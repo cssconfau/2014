@@ -82,6 +82,22 @@ module.exports = function(grunt) {
         ]
       }
     },
+    invalidate_cloudfront: {
+      options: {
+        key: s3Credentials.key,
+        secret: s3Credentials.secret,
+        distribution: 'E2V9RA0RKMLGPM'
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: './dist/',
+          src: ['**/*'],
+          filter: 'isFile',
+          dest: ''
+        }]
+      }
+    },
     connect: {
       server: {
         options: {
@@ -103,7 +119,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['connect', 'watch']);
 
   // S3 credentials required to run this
-  grunt.registerTask('release', ['default', 's3']);
+  grunt.registerTask('release', ['default', 's3', 'invalidate_cloudfront']);
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };
