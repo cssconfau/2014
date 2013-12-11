@@ -2,17 +2,14 @@
 module.exports = function(grunt) {
 
   var tilde = require('tilde-expansion'),
-      fs    = require('fs'),
       s3Credentials = {
         key: '',
         secret: ''
       };
 
-  tilde('~/.cssconf-s3-credentials', function ( path ) {
-    fs.exists(path, function ( exists ) {
-      if (exists)
-        s3Credentials = grunt.file.readJSON( path );
-    });
+  tilde('~/.cssconf-s3-credentials', function (path) {
+    if (grunt.file.exists(path))
+      s3Credentials = grunt.file.readJSON(path);
   }),
 
   // Project configuration.
