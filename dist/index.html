@@ -61,7 +61,7 @@
 
       <section class="sponsorship">
         <h2>Sponsorship</h2>
-        <p>We’re looking for fantastic companies to help make this event possible. If you think your company could help, please drop an email to <a href="mailto:sponsponsors@somewhere.com">sponsponsors@somewhere.com</a></p>
+        <p>We’re looking for fantastic companies to help make this event possible. If you think your company could help, please drop an email to <a href="mailto:sponsorship@THISDOMAIN">sponsorship@THISDOMAIN</a></p>
       </section>
 
       <section class="contact">
@@ -81,10 +81,21 @@
 
       <section class="contact">
         <h2>Get in touch</h2>
-        <p>You can find us on Twitter at <a href="https://twitter.com/cssconfau">@cssconfau</a>, and by email at <a href="mailto:somewhere@somwhere.com">somewhere@somwhere.com</a>.</p>
+        <p>You can contact us on Twitter at <a href="https://twitter.com/cssconfau">@cssconfau</a> and by email at <a href="mailto:team@THISDOMAIN">team@THISDOMAIN</a>.</p>
       </section>
 
     </article>
+
+    <script>
+      // Fix up obscured mailto links
+      (function(links) {
+        var domain = window.location.host, placeholder = 'THISDOMAIN';
+        for (var i = 0; i < links.length; i++) {
+          links[i].href = links[i].href.replace(placeholder, domain);
+          links[i].innerText = links[i].innerText.replace(placeholder, domain);
+        }
+      })(document.getElementsByTagName("a"));
+    </script>
 
     <script>
       var _gauges = _gauges || [];
