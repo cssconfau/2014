@@ -74,11 +74,12 @@ module.exports = function(grunt) {
         maxOperations: 5
       },
       dist: {
-        upload: [
+        sync: [
           {
             src: 'dist/**/*',
             dest: './',
-            rel: 'dist'
+            rel: 'dist',
+            verify: true
           }
         ]
       }
