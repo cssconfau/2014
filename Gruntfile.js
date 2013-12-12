@@ -70,7 +70,8 @@ module.exports = function(grunt) {
         bucket: 'cssconf.com.au',
         access: 'public-read',
         gzip:   true,
-        gzipExclude: ['.jpg', '.png']
+        gzipExclude: ['.jpg', '.png', '.eot'],
+        maxOperations: 5
       },
       dist: {
         upload: [
