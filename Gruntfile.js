@@ -100,6 +100,18 @@ module.exports = function(grunt) {
         }]
       }
     },
+    assemble: {
+      site: {
+        files: [
+          {
+            expand: true,
+            cwd: 'templates/pages',
+            src: ['**/*.hbs'],
+            dest: 'dist/'
+          }
+        ]
+      }
+    },
     connect: {
       server: {
         options: {
@@ -114,8 +126,11 @@ module.exports = function(grunt) {
   // Compile CSS
   grunt.registerTask('css', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess']);
 
+  // Compile HTML pages
+  grunt.registerTask('html', ['assemble']);
+
   // Default task.
-  grunt.registerTask('default', ['css']);
+  grunt.registerTask('default', ['css', 'html']);
 
   // Use for development
   grunt.registerTask('dev', ['connect', 'watch']);
@@ -124,4 +139,5 @@ module.exports = function(grunt) {
   grunt.registerTask('release', ['default', 's3', 'invalidate_cloudfront']);
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('assemble');
 };
