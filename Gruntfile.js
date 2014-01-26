@@ -16,8 +16,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     clean: ['dist/css/*', 'dist/**/*.html'],
     watch: {
-      files: ['sass/*.scss'],
-      tasks: ['css']
+      css: {
+        files: ['sass/*.scss'],
+        tasks: ['css']
+      },
+      html: {
+        files: ['templates/**/*'],
+        tasks: ['html']
+      }
     },
     sass: {
       main: {
@@ -101,14 +107,14 @@ module.exports = function(grunt) {
       }
     },
     assemble: {
+      options: {
+        plugins: ['assemble-contrib-permalinks'],
+        permalinks: { preset: 'pretty' },
+        postprocess: require('pretty'),
+        assets: 'dist',
+        layout: 'templates/layouts/default.hbs'
+      },
       site: {
-        options: {
-          plugins: ['assemble-contrib-permalinks'],
-          layout: 'templates/layouts/default.hbs',
-          permalinks: {
-            preset: 'pretty'
-          }
-        },
         files: [
           {
             expand: true,
