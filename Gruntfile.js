@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    clean: ['dist/css/*'],
+    clean: ['dist/css/*', 'dist/**/*.html'],
     watch: {
       files: ['sass/*.scss'],
       tasks: ['css']
@@ -102,6 +102,13 @@ module.exports = function(grunt) {
     },
     assemble: {
       site: {
+        options: {
+          plugins: ['assemble-contrib-permalinks'],
+          layout: 'templates/layouts/default.hbs',
+          permalinks: {
+            preset: 'pretty'
+          }
+        },
         files: [
           {
             expand: true,

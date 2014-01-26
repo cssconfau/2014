@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>CSSConf Australia 2014</title>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="css/2014.css">
+    <link rel="stylesheet" href="https://cloud.typography.com/7602852/644122/css/fonts.css">
+    <link rel="source" href="https://github.com/cssconfau/2014">
+    <meta property="og:title" content="CSSConf Australia 2014">
+    <meta name="description" content="A one day conference bringing together the designers and developers of the future of the web.">
+    <meta property="og:description" content="A one day conference bringing together the designers and developers of the future of the web.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://2014.cssconf.com.au/">
+    <meta property="og:image" content="http://2014.cssconf.com.au/images/icon-512.png">
+    <meta property="og:site_name" content="CSSConf Australia 2014">
+    <link href="http://2014.cssconf.com.au/" rel="canonical">
+    <!--
+        ____________________________________
+      / You should put in a talk proposal to \
+      \ speak at CSSConf Australia!          /
+        ------------------------------------
+               \   ^__^
+                \  (oo)\_______
+                   (__)\       )\/\
+                       ||----w |
+                       ||     ||
+    -->
+  </head>
+  <body>
+
+    <header>
+      <div class="page-width">
+        <h1 class="logo">
+          <span class="image"><img src="images/logo.svg" alt="CSSConf Australia 2014"></span>
+        </h1>
+      </div>
+    </header>
+
+    {{> body }}
+
+    <script>
+      // Fix up obscured mailto links
+      (function(links) {
+        var domain = 'cssconf.com.au', placeholder = 'THISDOMAIN';
+        for (var i = 0; i < links.length; i++) {
+          links[i].href = links[i].href.replace(placeholder, domain);
+          links[i].innerText = links[i].innerText.replace(placeholder, domain);
+        }
+      })(document.getElementsByTagName("a"));
+    </script>
+
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '52a79c748bfdf759e1000094');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+
+  </body>
+</html>
