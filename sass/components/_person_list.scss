@@ -1,0 +1,9 @@
+.person-list {
+  li, li a {
+    display: inline-block;
+  }
+  li a {
+    span { display: block; }
+    &.-textonly { }
+  }
+}
