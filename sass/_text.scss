@@ -1,0 +1,43 @@
+// Font faces
+
+@font-face {
+  font-family: 'Transat Text';
+  font-weight: 200;
+  src: url(../fonts/transat_text_light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  font-weight: 400;
+  src: url(../fonts/transat_text_standard.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  font-weight: 700;
+  src: url(../fonts/transat_text_bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Transat Text';
+  font-weight: 900;
+  src: url(../fonts/transat_text_black.woff) format('woff');
+}
+
+// Families
+
+$text-font-family: 'Transat Text', Avenir, sans-serif;
+
+// Sizes
+
+$body-font-size: 1.3rem;
+
+// Shared styles
+
+%body-font {
+  font-family: $text-font-family;
+  font-size: $body-font-size;
+  font-weight: 200;
+  line-height: 1.5;
+  color: $text-color;
+}

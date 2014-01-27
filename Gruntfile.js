@@ -14,7 +14,10 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    clean: ['dist/css/*', 'dist/**/*.html'],
+    clean: {
+      css: ['dist/css/*'],
+      html: ['dist/**/*.html']
+    },
     watch: {
       css: {
         files: ['sass/*.scss'],
@@ -112,7 +115,8 @@ module.exports = function(grunt) {
         permalinks: { preset: 'pretty' },
         postprocess: require('pretty'),
         assets: 'dist',
-        layout: 'templates/layouts/default.hbs'
+        layout: 'templates/layouts/default.hbs',
+        data: 'templates/data/*.json'
       },
       site: {
         files: [
@@ -137,10 +141,10 @@ module.exports = function(grunt) {
   });
 
   // Compile CSS
-  grunt.registerTask('css', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess']);
+  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer', 'csslint', 'recess']);
 
   // Compile HTML pages
-  grunt.registerTask('html', ['assemble']);
+  grunt.registerTask('html', ['clean:html', 'assemble']);
 
   // Default task.
   grunt.registerTask('default', ['css', 'html']);

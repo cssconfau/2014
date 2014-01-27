@@ -1,0 +1,9 @@
+%button {
+  display: inline-block;
+  padding: 10px 15px;
+  color: $page-color;
+  text-decoration: none;
+  background-color: $text-color;
+  border-radius: 5px;
+  transition: background-color 250ms;
+}

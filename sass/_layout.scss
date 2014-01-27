@@ -1,7 +1,9 @@
-%page-width {
-  max-width: 600px;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
+body > header {
+  img { max-width: 150px; }
+  a { @extend %button; }
+  background-color: rgba($page-color, 0.5);
+}
+
+body > footer {
+  margin-top: 100px;
 }

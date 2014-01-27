@@ -1,60 +1,83 @@
-<article class="announcement">
+---
+path: /
+pageClass: home
+---
 
-  <section class="summary">
-    <p>A day to bring together the designers and developers of the future of the web.</p>
+<section class="summary">
+  <p>Some summary of the event that makes it sound just dandy and super-fun</p>
+</section>
+
+<section class="conference">
+  <p class="summary">Join us for a a special one-track, one-day conference following on from the fantastic CSSConf US and CSSConf EU events, for a day dedicated to cutting edge CSS tools, techniques and the people that work with CSS every day.</p>
+  <img alt="Map">
+  <ul>
+    <li>
+      <a href="http://twitter.com/stubornella">
+        <img alt="Nicole Sullivan">
+        <span class="name">Nicole Sullivan</span>
+        <span class="twitters">@stubornella</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://twitter.com/stubornella">
+        <img alt="Nicole Sullivan">
+        <span class="name">Nicole Sullivan</span>
+        <span class="twitters">@stubornella</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://twitter.com/stubornella">
+        <img alt="Nicole Sullivan">
+        <span class="name">Nicole Sullivan</span>
+        <span class="twitters">@stubornella</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://twitter.com/stubornella">
+        <img alt="Nicole Sullivan">
+        <span class="name">Nicole Sullivan</span>
+        <span class="twitters">@stubornella</span>
+      </a>
+    </li>
+    <li class="more-tba">
+      Plus more to be announced…
+    </li>
+  </ul>
+
+  <section class="cfp">
+    <h3>Call for proposals</h3>
+    <p>Join us for a a special one-track, one-day conference following on from the fantastic CSSConf US and CSSConf EU events, for a day dedicated to cutting edge CSS tools, techniques and the people that work with CSS every day.</p>
+    <p><a href="">Submit a talk</a></p>
   </section>
+</section>
 
-  <section class="details">
-    <p>
-      On <em>Wednesday 9th April</em>, back-to-back with JSConf AU, the historic <a href="http://www.thatsmelbourne.com.au/Placestogo/TheatreVenues/AllTheatreVenues/Pages/7467.aspx">Melbourne Arts House</a> will be filled with international and local experts, tasty food, great coffee, and plenty to talk about.
-    </p>
-    <div class="photo">
-      <div class="image"><img src="{{assets}}/images/meat-market.jpg" alt="Melbourne Arts House, 1874"></div>
-      <p>Melbourne Arts House, 1874</p>
-    </div>
-    <p>
-      It will be a special one-track, one-day conference following on from the fantastic <a href="http://cssconf.com/">CSSConf US</a> and <a href="http://2013.cssconf.eu/">CSSConf EU</a> events. There’ll also be some fun activities around the conference day, allowing you to see parts of wonderful Melbourne and hang out with some new friends.
-    </p>
-  </section>
+<section class="tickets">
+  <h2>Tickets</h2>
+</section>
 
-  <section class="subscribe">
-    <p class="limited"><strong>Tickets go on sale early 2014 and will be strictly limited.</strong></p>
-    <p>Ticket availability will be announced via our mailing list and the <a href="https://twitter.com/cssconfau">@cssconfau</a> Twitter account. Sign up below to ensure you don’t miss out:</p>
-    <form action="http://jsconfau.createsend.com/t/j/s/ukyutu/" method="post">
-      <p><input id="fieldEmail" name="cm-ukyutu-ukyutu" type="email" required placeholder="Email address"></p>
-      <p><input type="submit" value="Join the list"></p>
-    </form>
-    <p>A number of student and scholarship tickets will be available to those who need them.</p>
-  </section>
+<section class="fringe-events">
+  <h2>Fringe Events</h2>
+</section>
 
-  <section class="team">
-    <h2>Team</h2>
-    <p>The core organising group is <a href="https://twitter.com/benschwarz">@benschwarz</a>, <a href="https://twitter.com/mobywhale">@mobywhale</a>, <a href="https://twitter.com/xzyfer">@xzyfer</a>, <a href="https://twitter.com/glenmaddern">@glenmaddern</a> and <a href="https://twitter.com/toolmantim">@toolmantim</a>. We’ve run community events all around Australia including JSConf, RubyConf, SydCSS and Rails&nbsp;Camp.</p>
-  </section>
+<section class="news">
+  <h2>News</h2>
+  <ol>
+    {{#each pages}}
+      {{#is data.section "news"}}
+        <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
+      {{/is}}
+    {{/each}}
+  </ol>
+</section>
 
-  <section class="sponsorship">
-    <h2>Sponsorship</h2>
-    <p>We’re looking for fantastic companies to help make this event possible. If you think your company could help, please drop an email to <a href="mailto:sponsors@THISDOMAIN">sponsors@THISDOMAIN</a>.</p>
-  </section>
+<section class="sponsors">
+  <h2>Sponsors</h2>
+</section>
 
-  <section class="contact">
-    <h2>Talk Proposals</h2>
-    <p>There’ll be a number of slots open for talk proposals. We’ll announce shortly what the submission and selection process will be.</p>
-  </section>
+<section class="team">
+  <h2>The Team</h2>
+</section>
 
-  <section class="spread-the-word">
-    <h2>Spread the word</h2>
-    <p>If you know someone that you’d like to be at the first CSSConf Australia, either to speak or just to hang out with, then let them know. If you don’t know anyone in particular, ask your Twitter peeps! Let’s try to get as many great people together as we can.</p>
-  </section>
-
-  <section class="contact">
-    <h2>Code of Conduct</h2>
-    <p>CSSConf Australia strives to be an inclusive, safe, accessible and fun event for everyone involved. It’s an important condition of participation that all organisers, sponsors and attendees follow the <a href="http://confcodeofconduct.com/">Conference Code of Conduct</a> at the conference and related events.</p>
-  </section>
-
-  <section class="contact">
-    <h2>Get in touch</h2>
-    <p>You can contact us on Twitter at <a href="https://twitter.com/cssconfau">@cssconfau</a> and by email at <a href="mailto:team@THISDOMAIN">team@THISDOMAIN</a>.</p>
-  </section>
-
-</article>
+<section class="contact">
+  <h2>Contact Us</h2>
+</section>

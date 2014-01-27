@@ -3,42 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>{{default title "CSSConf Australia 2014"}}</title>
+    <title>{{#if title}}{{title}} | {{/if}}{{siteTitle}}</title>
     <link href="{{assets}}/images/favicon.png" rel="shortcut icon" type="image/png">
     <link rel="stylesheet" href="{{assets}}/css/2014.css">
-    <link rel="stylesheet" href="https://cloud.typography.com/7602852/644122/css/fonts.css">
     <link rel="source" href="https://github.com/cssconfau/2014">
-    <meta property="og:title" content="CSSConf Australia 2014">
-    <meta name="description" content="A one day conference bringing together the designers and developers of the future of the web.">
-    <meta property="og:description" content="A one day conference bringing together the designers and developers of the future of the web.">
+    <meta property="og:title" content="{{#if title}}{{title}} | {{/if}}{{siteTitle}}">
+    <meta name="description" content="{{eventDescription}}">
+    <meta property="og:description" content="{{eventDescription}}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://2014.cssconf.com.au/">
-    <meta property="og:image" content="http://2014.cssconf.com.au/images/icon-512.png">
-    <meta property="og:site_name" content="CSSConf Australia 2014">
-    <link href="{{urlresolve 'http://2014.cssconf.com.au/' '/two'}}" rel="canonical">
+    <meta property="og:url" content="{{urlresolve rootUrl path}}">
+    <meta property="og:image" content="{{urlresolve rootUrl '/images/icon-512.png'}}">
+    <meta property="og:site_name" content="{{siteTitle}}">
+    <link href="{{urlresolve rootUrl path}}" rel="canonical">
     <!--
-        ____________________________________
-      / You should put in a talk proposal to \
-      \ speak at CSSConf Australia!          /
-        ------------------------------------
+          _______________________________________
+         /                                       \
+        /    Oh hai there! You should put in a    \
+       |    talk proposal, you l33t h4x0r you.     |
+        \                                         /
+         \–––––––––––––––––––––––––––––––––––––––/
                \   ^__^
                 \  (oo)\_______
                    (__)\       )\/\
-                       ||----w |
+                       ||––––w |
                        ||     ||
     -->
   </head>
-  <body>
+  <body class="{{pageClass}}">
 
     <header>
-      <div class="page-width">
-        <h1 class="logo">
-          <span class="image"><img src="{{assets}}/images/logo.svg" alt="CSSConf Australia 2014"></span>
-        </h1>
-      </div>
+      <h1><img src="{{assets}}/images/logo.svg" alt="CSSConf Australia 2014"></h1>
+      <p class="date"></p>
+      <p class="tickets"><a href="{{ticketsUrl}}">Buy tickets</a></p>
     </header>
 
-    {{> body }}
+    <article>
+      {{> body }}
+    </article>
+
+    <footer>
+      <img src="{{assets}}/images/pretty-scene.png" alt="Pretty scene">
+    </header>
 
     <script>
       // Fix up obscured mailto links
