@@ -13,34 +13,9 @@ pageClass: home
   <img alt="Map">
 
   <ul class="person-list">
-    <li>
-      <a href="http://twitter.com/stubornella">
-        <img src="http://placekitten.com/g/280/280" alt="Nicole Sullivan">
-        <span class="name">Nicole Sullivan</span>
-        <span class="twitters">@stubornella</span>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/stubornella">
-        <img src="http://placekitten.com/g/280/280" alt="Nicole Sullivan">
-        <span class="name">Nicole Sullivan</span>
-        <span class="twitters">@stubornella</span>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/stubornella">
-        <img src="http://placekitten.com/g/280/280" alt="Nicole Sullivan">
-        <span class="name">Nicole Sullivan</span>
-        <span class="twitters">@stubornella</span>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/stubornella">
-        <img src="http://placekitten.com/g/280/280" alt="Nicole Sullivan">
-        <span class="name">Nicole Sullivan</span>
-        <span class="twitters">@stubornella</span>
-      </a>
-    </li>
+    {{#each speakers}}
+      {{> person}}
+    {{/each}}
     <li class="-textonly">
       Plus more to be announced…
     </li>
@@ -117,41 +92,9 @@ pageClass: home
 <section id="team">
   <h2>The Team</h2>
   <ul class="person-list">
-    <li>
-      <a href="http://twitter.com/benschwarz">
-        <img src="http://placekitten.com/g/280/280" alt="Photo of Ben Schwarz">
-        <span class="name">Ben Schwarz</span>
-        <span class="twitters">@benschwarz</span>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/mobywhale">
-        <img src="http://placekitten.com/g/280/280" alt="Photo of Fiona Chan">
-        <span class="name">Fiona Chan</span>
-        <span class="twitters">@mobywhale</span>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/glenmaddern">
-        <img src="http://placekitten.com/g/280/280" alt="Photo of Glen Maddern">
-        <span class="name">Glen Maddern</span>
-        <span class="twitters">@glenmaddern</span>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/xzyfer">
-        <img src="{{assets}}/images/mugshots/team/michael.jpg" alt="Photo of Michael Mifsud">
-        <span class="name">Michael Mifsud</span>
-        <span class="twitters">@xzyfer</span>
-      </a>
-    </li>
-    <li>
-      <a href="http://twitter.com/toolmantim">
-        <img src="http://placekitten.com/g/280/280" alt="Photo of Tim Lucas">
-        <span class="name">Tim Lucas</span>
-        <span class="twitters">@toolmantim</span>
-      </a>
-    </li>
+    {{#each team}}
+      {{> person}}
+    {{/each}}
   </ul>
 </section>
 

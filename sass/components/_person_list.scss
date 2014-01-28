@@ -3,12 +3,26 @@
     display: inline-block;
   }
   li a {
-    img {
-      max-width: 150px;
-      border-radius: 50%;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    span { display: block; }
+    .photo {
+      @include responsive-image-container(150px,150px);
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
     }
-    span {
-      display: block;
+    .name, .twitters {
+      text-transform: uppercase;
+    }
+    .name {
+      font-size: 14px;
+    }
+    .twitters {
+      font-size: 12px;
+      font-weight: bold;
     }
     &.-textonly { }
   }

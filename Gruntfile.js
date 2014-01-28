@@ -129,7 +129,8 @@ module.exports = function(grunt) {
         },
         assets: 'dist',
         layout: 'templates/layouts/default.hbs',
-        data: 'templates/data/*.json'
+        data: 'templates/data/*.json',
+        partials: 'templates/partials/**/*.hbs'
       },
       site: {
         files: [
