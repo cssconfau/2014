@@ -23,6 +23,7 @@ html {
   font-size: 21px;
   background-color: $page-color;
   @extend %body-font;
+  text-rendering: optimizeLegibility;
 }
 
 a {
