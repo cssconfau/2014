@@ -50,8 +50,10 @@
       (function(links) {
         var domain = 'cssconf.com.au', placeholder = 'THISDOMAIN';
         for (var i = 0; i < links.length; i++) {
-          links[i].href = links[i].href.replace(placeholder, domain);
-          links[i].innerText = links[i].innerText.replace(placeholder, domain);
+          if (links[i].href.indexOf(placeholder) != -1)
+            links[i].href = links[i].href.replace(placeholder, domain);
+          if (links[i].innerText.indexOf(placeholder) != -1)
+            links[i].innerText = links[i].innerText.replace(placeholder, domain);
         }
       })(document.getElementsByTagName("a"));
     </script>
