@@ -1,9 +1,14 @@
 body.home {
 
-  section {
+  article > section {
     margin: 100px auto;
     h2 {
-      margin-bottom: 30px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
     }
     p {
       margin-top: .75em;

@@ -4,14 +4,17 @@
 
   <p class="summary">Join us for a a special one-track, one-day conference following on from the fantastic CSSConf US and CSSConf EU events, for a day dedicated to cutting edge CSS tools, techniques and the people that work with CSS every day.</p>
 
-  <ul class="person-list">
-    {{#each speakers}}
-      {{> person}}
-    {{/each}}
-    <li class="-textonly">
-      Plus more to be announced…
-    </li>
-  </ul>
+  <section class="speakers">
+    <h3>Speakers</h3>
+    <ul class="person-list">
+      {{#each speakers}}
+        {{> person}}
+      {{/each}}
+      <li class="-textonly">
+        Plus more to be announced…
+      </li>
+    </ul>
+  </section>
 
   <section class="cfp">
     <h3>Call for proposals</h3>
