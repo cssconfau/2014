@@ -150,7 +150,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['css', 'html']);
 
   // Use for development
-  grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('dev', ['default', 'connect', 'watch']);
 
   // S3 credentials required to run this
   grunt.registerTask('release', ['default', 's3', 'invalidate_cloudfront']);
