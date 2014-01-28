@@ -113,7 +113,20 @@ module.exports = function(grunt) {
       options: {
         plugins: ['assemble-contrib-permalinks'],
         permalinks: { preset: 'pretty' },
-        postprocess: require('pretty'),
+        postprocess: function(src) {
+          // require('pretty') was messing up whitespace around links, so we
+          // just use js-beautify directly
+          return require('js-beautify').html(src, {
+            indent_char: ' ',
+            indent_size: 2,
+            indent_inner_html: true,
+            unformatted: ['code', 'pre', 'em', 'strong', 'span']
+          })
+          // Remove any empty lines at the top of a file.
+          .replace(/^\s*/g, '')
+          // Normalize and condense all newlines
+          .replace(/(\r\n|\n){2,}/g, '\n');
+        },
         assets: 'dist',
         layout: 'templates/layouts/default.hbs',
         data: 'templates/data/*.json'

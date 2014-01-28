@@ -20,6 +20,6 @@
     "grunt-invalidate-cloudfront": "~0.1.2",
     "assemble": "~0.4.35",
     "assemble-contrib-permalinks": "~0.3.3",
-    "pretty": "~0.1.2"
+    "js-beautify": "~1.4.2"
   }
 }
