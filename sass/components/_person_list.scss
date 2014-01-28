@@ -3,7 +3,13 @@
     display: inline-block;
   }
   li a {
-    span { display: block; }
+    img {
+      max-width: 150px;
+      border-radius: 50%;
+    }
+    span {
+      display: block;
+    }
     &.-textonly { }
   }
 }
