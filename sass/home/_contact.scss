@@ -1,15 +1,17 @@
 body.home #contact {
   ul.main {
-    display: flex; margin-bottom: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 50px;
+    margin-left: -10px;
+    margin-right: -10px;
     li {
       flex-grow: 1;
       list-style: none;
+      margin: 10px;
       a {
         width: 100%;
         text-align: center;
-      }
-      & + li {
-        margin-left: 20px;
       }
     }
   }
