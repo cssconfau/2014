@@ -1,6 +1,5 @@
 body > header {
   img { max-width: 150px; }
-  a { @extend %button; }
   background-color: rgba($page-color, 0.5);
 }
 
