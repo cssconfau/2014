@@ -1,11 +1,4 @@
-@import "colors";
-@import "text";
-@import "forms";
-@import "layout";
-@import "responsive_images";
-
-@import "components/button";
-@import "components/person_list";
+// Reset
 
 html, body, h1, h2, h3, p, ul, ol, li {
   padding: 0;
@@ -14,6 +7,15 @@ html, body, h1, h2, h3, p, ul, ol, li {
   line-height: 1;
   box-sizing: border-box;
 }
+
+@import "colors";
+@import "text";
+@import "forms";
+@import "layout";
+@import "responsive_images";
+
+@import "components/button";
+@import "components/person_list";
 
 html {
   font-size: 21px;

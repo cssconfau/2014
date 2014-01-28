@@ -1,3 +1,8 @@
+%centered {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 body > header {
   img { max-width: 150px; }
   background-color: rgba($page-color, 0.5);
@@ -5,4 +10,8 @@ body > header {
 
 body > footer {
   margin-top: 100px;
+}
+
+body > header, body > footer, article > section {
+  @extend %centered;
 }
