@@ -19,7 +19,6 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-invalidate-cloudfront": "~0.1.4",
     "assemble": "~0.4.35",
-    "assemble-contrib-permalinks": "~0.3.3",
-    "js-beautify": "~1.4.2"
+    "assemble-contrib-permalinks": "~0.3.3"
   }
 }
