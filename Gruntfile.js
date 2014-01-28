@@ -155,7 +155,7 @@ module.exports = function(grunt) {
   });
 
   // Compile CSS
-  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer', 'csslint', 'recess']);
+  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
 
   // Compile HTML pages
   grunt.registerTask('html', ['clean:html', 'assemble']);

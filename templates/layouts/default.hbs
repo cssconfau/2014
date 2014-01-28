@@ -32,18 +32,14 @@
   <body class="{{pageClass}}">
 
     <header>
-      <h1><img src="{{assets}}/images/logo.svg" alt="CSSConf Australia 2014"></h1>
-      <p class="date">April 8–11, 2014</p>
+      <h1 class="logo"><div class="inner"><img src="{{assets}}/images/logo.svg" alt="CSSConf Australia 2014"></div></h1>
+      <p class="date">April 8–11, 2014<br><span class="city">Melbourne, Australia</span></p>
       <p class="tickets"><a class="button" href="{{ticketsUrl}}">Purchase tickets</a></p>
     </header>
 
     <article>
       {{> body }}
     </article>
-
-    <footer>
-      <img src="{{assets}}/images/pretty-scene.png" alt="Pretty scene">
-    </footer>
 
     <script>
       // Fix up obscured mailto links

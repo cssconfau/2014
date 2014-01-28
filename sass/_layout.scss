@@ -1,17 +1,30 @@
 %centered {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 body > header {
-  img { max-width: 150px; }
+  margin-top: 30px;
   background-color: rgba($page-color, 0.5);
+  position: relative;
+  padding-top: 140px;
+  .logo {
+    max-width: 500px;
+    margin: 0 auto 50px auto;
+    .inner { @include responsive-image-container(440px, 230px); }
+  }
+  .date {
+    position: absolute; top: 0; left: 20px; line-height: 1;
+    span.city { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
+  }
+  .tickets { position: absolute; top: 0; right: 20px; }
 }
 
 body > footer {
   margin-top: 100px;
 }
 
-body > header, body > footer, article > section {
+body > header, body > footer {
   @extend %centered;
 }
