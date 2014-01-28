@@ -1,0 +1,19 @@
+body.home #contact {
+  ul.main {
+    display: flex; margin-bottom: 50px;
+    li {
+      flex-grow: 1;
+      list-style: none;
+      a {
+        width: 100%;
+        text-align: center;
+      }
+      & + li {
+        margin-left: 20px;
+      }
+    }
+  }
+  p.minor {
+    font-size: 16px;
+  }
+}

@@ -1,9 +1,22 @@
 .person-list {
-  li, li a {
-    display: inline-block;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  li {
+    width: 150px;
+    text-align: center;
+    margin-bottom: 25px;
+    list-style: none;
+    &.-textonly {
+      font-size: 14px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
   }
   li a {
-    width: 150px;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     span { display: block; }
@@ -15,15 +28,19 @@
       }
     }
     .name, .twitters {
-      text-transform: uppercase;
     }
     .name {
-      font-size: 14px;
+      font-size: 19px;
+      margin-top: 10px;
     }
     .twitters {
       font-size: 12px;
       font-weight: bold;
+      text-transform: uppercase;
     }
     &.-textonly { }
+  }
+  li + li {
+    margin-left: 20px;
   }
 }

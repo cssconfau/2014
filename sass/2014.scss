@@ -1,9 +1,12 @@
 // Reset
 
+* {
+  box-sizing: border-box;
+}
+
 html, body, h1, h2, h3, p, ul, ol, li {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 @import "colors";
@@ -26,4 +29,4 @@ a {
   color: $text-color;
 }
 
-@import "pages/home";
+@import "home/index";

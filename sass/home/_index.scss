@@ -1,0 +1,26 @@
+body.home {
+
+  section {
+    margin: 100px auto;
+    h2 {
+      margin-bottom: 30px;
+    }
+    p {
+      margin-top: .75em;
+      margin-bottom: .75em;
+    }
+  }
+
+  #conference, #tickets, #fringe-events, #sponsors, #team, #contact {
+    @extend %centered;
+  }
+
+}
+
+@import "home/summary";
+@import "home/conference";
+@import "home/tickets";
+@import "home/fringe_events";
+@import "home/sponsors";
+@import "home/team";
+@import "home/contact";

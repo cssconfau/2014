@@ -1,8 +1,13 @@
 .button {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 18px 24px;
   color: $page-color;
   text-decoration: none;
   background-color: $text-color;
   border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
 }

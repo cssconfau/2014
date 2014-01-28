@@ -1,0 +1,10 @@
+<section id="news">
+  <h2>News</h2>
+  <ol>
+    {{#each pages}}
+      {{#is data.section "news"}}
+        <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
+      {{/is}}
+    {{/each}}
+  </ol>
+</section>

@@ -4,110 +4,18 @@ pageClass: home
 ---
 
 <section id="summary">
+  <h1 class="logo"><div class="inner"><img src="{{assets}}/images/logo.svg" alt="CSSConf Australia 2014"></div></h1>
   <p>Some summary of the event that makes it sound just dandy and super-fun</p>
 </section>
 
-<section id="conference">
-  <p class="summary">Join us for a a special one-track, one-day conference following on from the fantastic CSSConf US and CSSConf EU events, for a day dedicated to cutting edge CSS tools, techniques and the people that work with CSS every day.</p>
+{{> conference}}
 
-  <img alt="Map">
+{{> tickets}}
 
-  <ul class="person-list">
-    {{#each speakers}}
-      {{> person}}
-    {{/each}}
-    <li class="-textonly">
-      Plus more to be announced…
-    </li>
-  </ul>
+{{> fringe-events}}
 
-  <section class="cfp">
-    <h3>Call for proposals</h3>
-    <p>Join us for a a special one-track, one-day conference following on from the fantastic CSSConf US and CSSConf EU events, for a day dedicated to cutting edge CSS tools, techniques and the people that work with CSS every day.</p>
-    <p><a href="">Submit a talk</a></p>
-  </section>
-</section>
+{{> sponsors}}
 
-<section id="tickets">
-  <h2>Tickets</h2>
+{{> team}}
 
-  <table>
-    <thead>
-      <tr>
-        <td></td>
-        <th scope="col">CSSConf</th>
-        <th scope="col">CSSConf + JSConf</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Early Bird <span class="until">until Feb 10</span></th>
-        <td>$450</td>
-        <td>$750</td>
-      </tr>
-      <tr>
-        <th scope="row">Middle Bird <span class="until">until Mar 25</span></th>
-        <td>$500</td>
-        <td>$800</td>
-      </tr>
-      <tr>
-        <th scope="row">Late Bird <span class="until">from Mar 26</span></th>
-        <td>$550</td>
-        <td>$850</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="inclusions">
-    <p>All tickets include:</p>
-    <ul>
-      <li>Full day conference with coffee, lunch and after party</li>
-      <li>Entry to fringe events</li>
-      <li>Laughs and goodtimes</li>
-    </ul>
-  </div>
-
-  <a href="{{ticketsUrl}}">Purchase tickets</a>
-</section>
-
-<section id="fringe-events">
-  <h2>Fringe Events</h2>
-</section>
-
-{{#if false}}
-<section id="news">
-  <h2>News</h2>
-  <ol>
-    {{#each pages}}
-      {{#is data.section "news"}}
-        <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
-      {{/is}}
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-<section id="sponsors">
-  <h2>Sponsors</h2>
-</section>
-
-<section id="team">
-  <h2>The Team</h2>
-  <ul class="person-list">
-    {{#each team}}
-      {{> person}}
-    {{/each}}
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <ul class="main">
-    <li><a href="mailto:hello@THISDOMAIN" class="button">Email</a></li>
-    <li><a href="https://twitter.com/csconfau" class="button">Twitter</a></li>
-    <li><a href="https://lanyrd.com/csconfau" class="button">Lanyrd</a></li>
-  </ul>
-  <p>All organisers, sponsors and attendees are required to follow the conference code of conduct.</p>
-  <p>Logo and illustrations by <a href="http://carlahackett.com/">Carla Hackett</a>. Design by <a href="http://toolmantim.com/">Tim Lucas</a>.</p>
-  <p class="minor">Cssconf Ltd. • Registered Not for Profit • ABN: 123 123 123</p>
-</section>
+{{> contact}}
