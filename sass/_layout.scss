@@ -12,6 +12,7 @@ body > header {
   margin-top: 40px;
   background-color: rgba($page-color, 0.5);
   position: relative;
+  @extend %centered;
   .date {
     line-height: 1;
     span.city { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
@@ -20,9 +21,7 @@ body > header {
 }
 
 body > footer {
-  margin-top: 100px;
-}
-
-body > header, body > footer {
-  @extend %centered;
+  background: transparent url(../images/illustrations/footer.svg) center bottom no-repeat;
+  background-size: 100%;
+  padding-bottom: (350px/1328px) * 100%;
 }
