@@ -1,8 +1,11 @@
 #fringe-events {
+
   article {
+
     position: relative;
     margin-top: 40px;
     padding-top: 10px;
+
     &::before {
       content: ' ';
       display: block;
@@ -14,6 +17,39 @@
       background: transparent url(../images/decorative/line.svg) 0 center no-repeat;
       background-size: 100%;
     }
+
+    &::after {
+      content: ' ';
+      background-repeat: no-repeat;
+      background-position: top right;
+      position: absolute;
+      top: 10px;
+      right: 0;
+    }
+
+    &.zoo::after {
+      background-image: url(../images/illustrations/koala.svg);
+      width: 185px;
+      height: 240px;
+      background-size: 95%;
+    }
+
+    &.party::after {
+      background-image: url(../images/illustrations/party.svg);
+      width: 270px;
+      height: 174px;
+      top: 40px;
+      background-size: 95%;
+    }
+
+    &.decompress::after {
+      background-image: url(../images/illustrations/decompress.svg);
+      width: 492px;
+      height: 236px;
+      top: 90px;
+      background-size: 85%;
+    }
+
     header {
       date, h1, h2 { margin: 0; line-height: 1.2; }
       date {
@@ -30,4 +66,6 @@
       font-size: 18px;
     }
   }
+
+
 }

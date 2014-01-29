@@ -18,8 +18,10 @@ body.home #contact {
     }
   }
 
+  p {
+    max-width: none;
+  }
   p.minor {
     font-size: 16px;
   }
-
 }

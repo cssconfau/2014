@@ -1,5 +1,16 @@
 #tickets {
 
+  &::after {
+    content: ' ';
+    width: 144px;
+    height: 132px;
+    position: absolute;
+    top: -35px;
+    right: 6%;
+    background: transparent url(../images/illustrations/tickets.svg) no-repeat;
+    background-size: 95%;
+  }
+
   .tickets-inner {
     display: flex;
     .prices {

@@ -1,0 +1,14 @@
+#sponsors {
+
+  &::after {
+    content: ' ';
+    width: 211px;
+    height: 107px;
+    position: absolute;
+    top: -15px;
+    right: 6%;
+    background: transparent url(../images/illustrations/cloud.svg) no-repeat;
+    background-size: 90%;
+  }
+
+}
