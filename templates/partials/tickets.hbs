@@ -2,42 +2,52 @@
   <div>
     <h2><img src="{{assets}}/images/headings/tickets.svg" alt="Tickets"></h2>
 
-    <table>
-      <thead>
-        <tr>
-          <td></td>
-          <th scope="col">CSSConf</th>
-          <th scope="col">CSSConf + JSConf</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Early Bird <span class="until">until <date datetime="2014-02-10">Feb 10</date></span></th>
-          <td>$400</td>
-          <td>$750</td>
-        </tr>
-        <tr>
-          <th scope="row">Middle Bird <span class="until">until <date datetime="2014-03-25">Mar 25</date></span></th>
-          <td>$450</td>
-          <td>$850</td>
-        </tr>
-        <tr>
-          <th scope="row">Late Bird <span class="until">from <date datetime="2014-03-26">Mar 26</date></span></th>
-          <td>$500</td>
-          <td>$950</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="tickets-inner">
 
-    <div class="inclusions">
-      <p>All tickets include:</p>
-      <ul>
-        <li>Full day conference with coffee, lunch and after party</li>
-        <li>Entry to fringe events</li>
-        <li>Laughs and goodtimes</li>
-      </ul>
+      <div class="prices">
+        <table>
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col">CSSConf</th>
+              <th scope="col">CSSConf + JSConf</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Early Bird <span class="until">until <date datetime="2014-02-10">Feb 10</date></span></th>
+              <td>$400</td>
+              <td>$750</td>
+            </tr>
+            <tr class="inactive">
+              <th scope="row">Middle Bird <span class="until">until <date datetime="2014-03-25">Mar 25</date></span></th>
+              <td>$450</td>
+              <td>$850</td>
+            </tr>
+            <tr class="inactive">
+              <th scope="row">Late Bird <span class="until">from <date datetime="2014-03-26">Mar 26</date></span></th>
+              <td>$500</td>
+              <td>$950</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="extras">
+
+        <div class="inclusions">
+          <p>All tickets include:</p>
+          <ul>
+            <li>Full day conference with coffee, lunch and after party</li>
+            <li>Entry to fringe events</li>
+            <li>Lols and good times</li>
+          </ul>
+        </div>
+
+        <a href="{{ticketsUrl}}" class="button">Purchase tickets</a>
+
+      </div>
+
     </div>
-
-    <a href="{{ticketsUrl}}" class="button">Purchase tickets</a>
   </div>
 </section>

@@ -26,4 +26,24 @@ body > footer {
   background: transparent url(../images/illustrations/footer.svg) center bottom no-repeat;
   background-size: 100%;
   padding-bottom: (390px/1807px) * 100%;
+  position: relative;
+}
+
+body > footer .oh-hai {
+  position: absolute;
+  bottom: 26px;
+  left: 20px;
+  width: 15%;
+  border: 1px solid red;
+  div {
+    top: 0;
+    left: 0;
+  }
+  &::before {
+
+  }
+  &::after {
+
+  }
+
 }

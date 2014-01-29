@@ -16,6 +16,7 @@ body.home {
     p {
       margin-top: .75em;
       margin-bottom: .75em;
+      max-width: 35em;
     }
     &::before {
       content: ' ';
@@ -28,6 +29,10 @@ body.home {
       background: transparent url(../images/decorative/line.svg) 0 center no-repeat;
       background-size: 100%;
     }
+  }
+
+  #conference, #summary {
+    &::before { display: none; }
   }
 
   #conference, #tickets, #fringe-events, #sponsors, #team, #contact {
