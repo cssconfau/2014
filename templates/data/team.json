@@ -1,24 +1,28 @@
 [
   {
     "name": "Ben Schwarz",
-    "twitter": "benschwarz"
+    "twitter": "benschwarz",
+    "photo": "team/ben.jpg"
   },
   {
     "name": "Fiona Chan",
-    "twitter": "mobywhale"
+    "twitter": "mobywhale",
+    "photo": "team/fiona.jpg"
   },
   {
     "name": "Glen Maddern",
-    "twitter": "glenmaddern"
+    "twitter": "glenmaddern",
+    "photo": "team/glen.jpg"
   },
   {
-    "photo": "team/michael.jpg",
     "name": "Michael Mifsud",
-    "twitter": "xzyfer"
+    "twitter": "xzyfer",
+    "photo": "team/michael.jpg"
   },
   {
     "name": "Tim Lucas",
-    "twitter": "toolmantim"
+    "twitter": "toolmantim",
+    "photo": "team/tim.jpg"
   }
 
 ]
