@@ -1,10 +1,11 @@
 body.home {
 
   article > section {
-    margin: 100px auto;
+    margin: 125px auto;
+    position: relative;
     h2 {
       margin-top: 50px;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
       img { height: 85px; }
     }
     h3 {
@@ -16,10 +17,21 @@ body.home {
       margin-top: .75em;
       margin-bottom: .75em;
     }
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: transparent url(../images/decorative/line.svg) 0 center no-repeat;
+      background-size: 100%;
+    }
   }
 
   #conference, #tickets, #fringe-events, #sponsors, #team, #contact {
-    @extend %centered;
+    > div { @extend %centered; }
   }
 
 }

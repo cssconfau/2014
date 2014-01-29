@@ -1,0 +1,33 @@
+#fringe-events {
+  article {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 10px;
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: transparent url(../images/decorative/line.svg) 0 center no-repeat;
+      background-size: 100%;
+    }
+    header {
+      date, h1, h2 { margin: 0; line-height: 1.2; }
+      date {
+        display: block; font-size: 14px; font-weight: 400px; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;
+        sup { text-transform: lowercase; }
+      }
+      h1   {
+        font-size: 48px; font-weight: 800; margin-bottom: 0;
+        a { text-decoration: none; }
+      }
+      h2   { font-size: 24px; font-weight: 800; text-transform: uppercase; }
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}

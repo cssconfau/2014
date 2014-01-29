@@ -1,10 +1,12 @@
 <section id="news">
-  <h2><img src="{{assets}}/images/headings/news.svg" alt="News"></h2>
-  <ol>
-    {{#each pages}}
-      {{#is data.section "news"}}
-        <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
-      {{/is}}
-    {{/each}}
-  </ol>
+  <div>
+    <h2><img src="{{assets}}/images/headings/news.svg" alt="News"></h2>
+    <ol>
+      {{#each pages}}
+        {{#is data.section "news"}}
+          <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
+        {{/is}}
+      {{/each}}
+    </ol>
+  </div>
 </section>
