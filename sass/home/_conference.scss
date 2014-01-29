@@ -1,4 +1,5 @@
 body.home #conference {
+  margin-top: 150px;
 
   .summary {
     .map {
@@ -11,7 +12,23 @@ body.home #conference {
     }
     p {
       font-size: 30px;
-      margin-bottom: 45px;
+    }
+  }
+
+  .speakers {
+    .person-list {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .cfp {
+    > div {
+      display: flex;
+      p.about {
+        flex: 1;
+        margin-right: 20px;
+      }
     }
   }
 

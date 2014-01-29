@@ -1,21 +1,12 @@
 body.home #summary {
+  margin-top: 75px;
   background: transparent url(../images/illustrations/header.svg) center bottom no-repeat;
   background-size: 100%;
   padding-bottom: (714px/1996px) * 100%;
   .logo {
-    width: 40%;
-    margin: 100px auto -100% auto;
-    transform: translateX(-1%);
-    .inner { @include responsive-image-container(440px, 230px); }
-  }
-  p {
-    max-width: 18em;
-    margin: 0 auto -65px auto;
-    font-size: 24px;
-    font-weight: 200;
-    line-height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    width: 30%;
+    margin: 0 auto -13% auto;
+    transform: translateX(-3%);
+    .inner { @include responsive-image-container(1397px, 1080px); }
   }
 }

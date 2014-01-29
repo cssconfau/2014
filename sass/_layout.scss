@@ -15,7 +15,9 @@ body > header {
   @extend %centered;
   .date {
     line-height: 1;
-    span.city { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 50px;
   }
   .tickets {}
 }
