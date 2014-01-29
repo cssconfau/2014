@@ -1,12 +1,5 @@
 body.home #conference {
 
-  h3 {
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-size: 14px;
-  }
-
   section {
     margin: 35px 0;
   }
@@ -33,6 +26,13 @@ body.home #conference {
   }
 
   .cfp {
+    h3 {
+      margin-top: 50px;
+      margin-bottom: 0;
+      img {
+        height: 17px;
+      }
+    }
     > div {
       display: flex;
       p.about {
