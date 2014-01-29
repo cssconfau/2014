@@ -1,5 +1,16 @@
 body.home #conference {
 
+  h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+
+  section {
+    margin: 35px 0;
+  }
+
   .summary {
     .map {
       float: right;
@@ -27,6 +38,9 @@ body.home #conference {
       p.about {
         flex: 1;
         margin-right: 20px;
+      }
+      p.submit {
+        margin-bottom: 0;
       }
     }
   }
