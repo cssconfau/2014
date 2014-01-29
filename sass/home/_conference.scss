@@ -1,12 +1,18 @@
 body.home #conference {
-  .map {
-    width: 300px;
-    float: right;
-    margin-left: 30px;
-    margin-top: -10px;
+
+  .summary {
+    .map {
+      float: right;
+      width: 35%;
+      min-width: 200px;
+      div { @include responsive-image-container(400px, 208px); }
+      img { width: 100%; }
+      margin-left: 20px;
+    }
+    p {
+      font-size: 30px;
+      margin-bottom: 45px;
+    }
   }
-  p {
-    font-size: 24px;
-    margin-bottom: 45px;
-  }
+
 }
