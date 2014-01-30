@@ -44,6 +44,7 @@
     th, td {
       border: 2px solid $light-orange;
       padding: 20px 15px 15px;
+      @media only screen and (max-width: 400px) { padding: 10px; }
     }
     thead td {
       border-left: none;
@@ -58,6 +59,7 @@
         letter-spacing: 1px;
         text-align: right;
         padding-right: 20px;
+        @media only screen and (max-width: 400px) { padding-right: 10px; }
         .until {
           display: block;
           margin-top: 5px;
