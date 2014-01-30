@@ -54,7 +54,7 @@ body > footer {
       background-image: url(../images/illustrations/giraffe-1.svg);
       background-position: 0 300%;
       transition-delay: 300ms;
-      transition-duration: 400ms;
+      transition-duration: 550ms;
     }
 
     &::after {
@@ -73,7 +73,7 @@ body > footer {
         background-position: 0 130%;
       }
       &::after {
-        transition-delay: 225ms;
+        transition-delay: 325ms;
         background-position: 0 130%;
       }
     }
