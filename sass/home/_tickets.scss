@@ -1,5 +1,7 @@
 #tickets {
 
+  h2 img { height: 115px; }
+
   &::after {
     content: ' ';
     width: 144px;
