@@ -28,4 +28,56 @@ body > footer {
   background-size: 100%;
   padding-bottom: (390px/1807px) * 100%;
   position: relative;
+
+  .oh-hai {
+    width: 100%;
+    margin-bottom: 2.3%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &::before, &::after {
+      content: ' ';
+      position: absolute;
+      bottom: 0;
+      padding-top: 5%;
+      background-repeat: no-repeat;
+      transition: background-position 400ms cubic-bezier(0.840, 0.020, 0.000, 1.630);
+    }
+
+    &::before {
+      left: 5%;
+      width: 6.5%;
+      padding-bottom: (297px/1080px) * 100%;
+      background-image: url(../images/illustrations/giraffe-1.svg);
+      background-position: 0 300%;
+      transition-delay: 300ms;
+      transition-duration: 400ms;
+    }
+
+    &::after {
+      left: 9.5%;
+      width: 6.5%;
+      padding-bottom: (360px/1080px) * 100%;
+      background-image: url(../images/illustrations/giraffe-2.svg);
+      background-position: 0 210%;
+      transition-delay: 100ms;
+      transition-duration: 550ms;
+    }
+
+    &:hover {
+      &::before {
+        transition-delay: 200ms;
+        background-position: 0 130%;
+      }
+      &::after {
+        transition-delay: 225ms;
+        background-position: 0 130%;
+      }
+    }
+
+  }
+
 }
