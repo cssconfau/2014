@@ -1,12 +1,12 @@
 body.home #summary {
-  margin-top: 75px;
+  margin-top: 100px;
   background: transparent url(../images/illustrations/header.svg) center bottom no-repeat;
   background-size: 100%;
   padding-bottom: (714px/1996px) * 100%;
   .logo {
     width: 30%;
-    margin: 0 auto -13% auto;
-    transform: translateX(-6%);
+    margin: 0 auto -12% auto;
+    transform: translateX(-7%);
     .inner { @include responsive-image-container(1397px, 1080px); }
   }
 }
