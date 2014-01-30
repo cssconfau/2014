@@ -42,6 +42,8 @@
         display: block;
         margin-left: 50%;
         transform: translate(-50%);
+        max-width: 100%;
+        background-size: 100%;
       }
     }
 
@@ -67,6 +69,7 @@
       height: 236px;
       top: 90px;
       background-size: 85%;
+      @media only screen and (max-width: 600px) { margin-top: -40px; }
     }
 
     header {
@@ -76,7 +79,7 @@
         sup { text-transform: lowercase; }
       }
       h1   {
-        font-size: 48px; font-weight: 800; margin-bottom: 0;
+        font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 0;
         a { text-decoration: none; }
       }
       h2   { font-size: 24px; font-weight: 800; text-transform: uppercase; }
