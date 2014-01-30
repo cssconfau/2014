@@ -8,6 +8,11 @@
     margin-top: 40px;
     padding-top: 10px;
 
+    @media only screen and (max-width: 900px) { p { max-width: 30em; } }
+    @media only screen and (max-width: 800px) { p { max-width: 25em; } }
+    @media only screen and (max-width: 700px) { p { max-width: 20em; } }
+    @media only screen and (max-width: 600px) { p { max-width: none; } }
+
     &::before {
       content: ' ';
       display: block;
@@ -27,6 +32,17 @@
       position: absolute;
       top: 10px;
       right: 0;
+      @media only screen and (max-width: 600px) {
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        background-position: bottom center;
+        display: block;
+        margin-left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     &.zoo::after {
