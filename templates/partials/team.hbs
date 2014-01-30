@@ -1,0 +1,11 @@
+<section id="team">
+  <div>
+    <h2><img src="{{assets}}/images/headings/the-team.svg" alt="The Team"></h2>
+    <p>We’re a small group of designers and developers who, just like you, spend most of our time in a web inspector. We’ve all been involved in running community events in the past, including JSConf, RubyConf, SydCSS, and Rails&nbsp;Camp, but we’re keen to make this event a little different.</p>
+    <ul class="person-list">
+      {{#each team}}
+        {{> person}}
+      {{/each}}
+    </ul>
+  </div>
+</section>

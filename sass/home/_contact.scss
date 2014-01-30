@@ -1,0 +1,32 @@
+body.home #contact {
+
+  h2 img { height: 95px; }
+
+  margin-bottom: 0;
+
+  ul.main {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 30px;
+    @media only screen and (max-width: 500px) { flex-flow: column wrap; }
+    li {
+      flex-grow: 1;
+      list-style: none;
+      margin: 10px;
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  p {
+    max-width: none;
+  }
+  p.minor {
+    margin-top: 50px;
+    font-size: 18px;
+  }
+}

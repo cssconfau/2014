@@ -1,0 +1,14 @@
+---
+title: News
+path: /news
+---
+
+<h1>News index</h1>
+
+<ol>
+  {{#each pages}}
+    {{#is data.section "news"}}
+      <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
+    {{/is}}
+  {{/each}}
+</ol>

@@ -1,6 +1,8 @@
 // This helps to prevent content moving around during page load by ensuring
 // the the image (using a container) always has a height, even when using
 // proportional/responsive widths.
+//
+// The width and height parameters are only used to calculate the ratio
 @mixin responsive-image-container($width, $height) {
   $top-padding: ($height / $width) * 100%;
   position: relative;

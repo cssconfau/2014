@@ -14,10 +14,19 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    clean: ['dist/css/*'],
+    clean: {
+      css: ['dist/css/*'],
+      html: ['dist/**/*.html']
+    },
     watch: {
-      files: ['sass/*.scss'],
-      tasks: ['css']
+      css: {
+        files: ['sass/**/*.scss'],
+        tasks: ['css']
+      },
+      html: {
+        files: ['templates/**/*'],
+        tasks: ['html']
+      }
     },
     sass: {
       main: {
@@ -100,6 +109,26 @@ module.exports = function(grunt) {
         }]
       }
     },
+    assemble: {
+      options: {
+        plugins: ['assemble-contrib-permalinks'],
+        permalinks: { preset: 'pretty' },
+        assets: 'dist',
+        layout: 'templates/layouts/default.hbs',
+        data: 'templates/data/*.json',
+        partials: 'templates/partials/**/*.hbs'
+      },
+      site: {
+        files: [
+          {
+            expand: true,
+            cwd: 'templates/pages',
+            src: ['**/*.hbs'],
+            dest: 'dist/'
+          }
+        ]
+      }
+    },
     connect: {
       server: {
         options: {
@@ -112,16 +141,20 @@ module.exports = function(grunt) {
   });
 
   // Compile CSS
-  grunt.registerTask('css', ['clean', 'sass', 'autoprefixer', 'csslint', 'recess']);
+  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
+
+  // Compile HTML pages
+  grunt.registerTask('html', ['clean:html', 'assemble']);
 
   // Default task.
-  grunt.registerTask('default', ['css']);
+  grunt.registerTask('default', ['css', 'html']);
 
   // Use for development
-  grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('dev', ['default', 'connect', 'watch']);
 
   // S3 credentials required to run this
   grunt.registerTask('release', ['default', 's3', 'invalidate_cloudfront']);
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('assemble');
 };

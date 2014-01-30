@@ -4,5 +4,8 @@
   "universal-selector": false,
   "box-sizing": false,
   "unique-headings": false,
-  "box-model": false
+  "box-model": false,
+  "bulletproof-font-face": false,
+  "fallback-colors": false,
+  "known-properties": false
 }

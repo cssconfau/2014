@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{{#if title}}{{title}} | {{/if}}{{siteTitle}}</title>
+    <link rel="stylesheet" href="{{assets}}/css/2014.css">
+    <link rel="source" href="https://github.com/cssconfau/2014">
+    <meta property="og:title" content="{{#if title}}{{title}} | {{/if}}{{siteTitle}}">
+    <meta name="description" content="{{eventDescription}}">
+    <meta property="og:description" content="{{eventDescription}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{urlresolve rootUrl path}}">
+    <meta property="og:image" content="{{urlresolve rootUrl '/images/og-logo.png'}}">
+    <meta property="og:site_name" content="{{siteTitle}}">
+    <link href="{{urlresolve rootUrl path}}" rel="canonical">
+    <!--
+          _______________________________________
+         /                                       \
+        /    Oh hai there! You should put in a    \
+       |    talk proposal, you l33t h4x0r you.     |
+        \                                         /
+         \–––––––––––––––––––––––––––––––––––––––/
+               \   ^__^
+                \  (oo)\_______
+                   (__)\       )\/\
+                       ||––––w |
+                       ||     ||
+
+
+      Also, don’t look too closely :) This whole thing was designed, hacked and
+      shipped by Tim in the wee hours of the morning of January 30, 2014.
+    -->
+  </head>
+  <body class="{{pageClass}}" id="overrides">
+
+    <header>
+      <p class="date">April 8–11, 2014</p>
+      <p class="tickets"><a class="button" href="{{ticketsUrl}}">Purchase tickets</a></p>
+    </header>
+
+    <article>
+      {{> body }}
+    </article>
+
+    <footer>
+      <div class="oh-hai">&nbsp;</div>
+    </footer>
+
+    <script>
+      // Fix up obscured mailto links
+      (function(links) {
+        var domain = 'cssconf.com.au', placeholder = 'THISDOMAIN';
+        for (var i = 0; i < links.length; i++) {
+          if (links[i].href.indexOf(placeholder) != -1)
+            links[i].href = links[i].href.replace(placeholder, domain);
+          if (links[i].innerText.indexOf(placeholder) != -1)
+            links[i].innerText = links[i].innerText.replace(placeholder, domain);
+        }
+      })(document.getElementsByTagName("a"));
+    </script>
+
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '52a79c748bfdf759e1000094');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+
+    <script>
+      (function() {
+        if (!document.querySelector) return;
+        window.addEventListener('load', function() {
+          var footer = document.querySelector('body > footer');
+          footer.addEventListener('touchstart', function() {
+            var elem = footer.querySelector('.oh-hai');
+            if (elem.classList) elem.classList.toggle('active');
+          })
+        })
+      })()
+    </script>
+  </body>
+</html>

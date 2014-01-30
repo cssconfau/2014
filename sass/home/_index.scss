@@ -1,0 +1,54 @@
+body.home {
+
+  article > section {
+    margin: 175px auto;
+    position: relative;
+    @media only screen and (max-width: 900px) { margin: 125px auto; }
+    @media only screen and (max-width: 700px) { margin: 100px auto; }
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 15px;
+    }
+    h2 img, h3 img { max-width: 100%; }
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      img { height: 20px; }
+    }
+    p {
+      margin-top: .75em;
+      margin-bottom: .75em;
+      max-width: 35em;
+    }
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: -125px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: transparent url(../images/decorative/line.svg) 0 center no-repeat;
+      background-size: 100%;
+      @media only screen and (max-width: 900px) { top: -88px; }
+      @media only screen and (max-width: 700px) { top: -80px; }
+    }
+  }
+
+  #conference, #summary {
+    &::before { display: none; }
+  }
+
+  #conference, #tickets, #fringe-events, #sponsors, #team, #contact {
+    > div { @extend %centered; }
+  }
+
+}
+
+@import "home/summary";
+@import "home/conference";
+@import "home/tickets";
+@import "home/fringe_events";
+@import "home/sponsors";
+@import "home/team";
+@import "home/contact";

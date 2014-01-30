@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Nicole Sullivan",
+    "twitter": "stubbornella",
+    "photo": "speakers/nicole.jpg"
+  },
+  {
+    "name": "Nicolas Gallagher",
+    "twitter": "necolas",
+    "photo": "speakers/nicolas.jpg"
+
+  },
+  {
+    "name": "Ana Tudor",
+    "twitter": "thebabydino",
+    "photo": "speakers/ana.jpg"
+  },
+  {
+    "name": "Simurai",
+    "twitter": "simurai",
+    "photo": "speakers/simurai.jpg"
+  }
+]

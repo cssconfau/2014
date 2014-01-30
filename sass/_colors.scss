@@ -1,9 +1,14 @@
-$bright-orange: #ff8400;
-$orange: #b65f02;
-$dark-orange: #7c2f0f;
-$slighty-lighter-dark-orange: #883715;
-$light-dark-orange: #c68d75;
-$lighter-dark-orange: #d5a089;
-$grey: #999;
-$lighter-grey: #000;
-$tinted-white: #ffeedb;
+// Named colours
+
+$light-orange: #fe7f2a;
+$orange: #fe6600;
+$dark-orange: #a64300;
+
+// Layout colours
+
+$page-color: $orange;
+
+// Type colours
+
+$text-color: white;
+$dark-text-color: $dark-orange;

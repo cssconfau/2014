@@ -1,101 +1,33 @@
-@import "colors";
-@import "fonts";
-@import "layout";
-@import "responsive_images";
-@import "forms";
+// Reset
 
-html, body, h1, input {
-  padding: 0;
-  margin: 0;
-  line-height: 1.4;
+* {
   box-sizing: border-box;
 }
 
-p {
-  margin: 1rem 0;
+html, body, h1, h2, h3, p, ul, ol, li {
+  padding: 0;
+  margin: 0;
 }
 
-img {
-  width: 100%;
-}
+@import "colors";
+@import "text";
+@import "forms";
+@import "responsive_images";
 
-h2 {
-  @extend %subheading-font;
-  margin: 1rem 0;
-  font-size: 1.6rem;
-  line-height: 1;
-  border-bottom: 1px solid $tinted-white;
-}
+@import "layout";
 
-body {
+@import "components/button";
+@import "components/person_list";
+
+html {
+  font-size: 21px;
+  background-color: $page-color;
   @extend %body-font;
+  text-rendering: optimizeLegibility;
 }
 
 a {
-  color: $link-color;
-  text-decoration: none;
-  transition: color 200ms;
-  &:hover { color: $link-hover-color; }
+  color: $text-color;
 }
 
-header {
-  padding: 4rem 0 2rem;
-  line-height: 0;
-  text-align: center;
-  background-color: black;
-  .page-width { @extend %page-width; }
-  .image { @include responsive-image-container(565px,84px); }
-}
-
-article.announcement {
-  @extend %page-width;
-  margin-bottom: 7.5rem;
-
-  section {
-    margin: 3rem 0;
-  }
-
-  .summary {
-    margin-bottom: -1rem;
-    @extend %feature-font;
-    font-size: 2.25rem;
-  }
-
-  .details {
-    .photo {
-      margin: 2rem 0;
-      .image { @include responsive-image-container(1000px,682px); }
-      p {
-        @extend %feature-font;
-        margin-top: 1rem;
-        color: $light-text-color;
-        text-align: right;
-      }
-    }
-  }
-
-  .subscribe {
-    padding: 1.8rem 1.9rem 2rem 1.9rem;
-    color: $dark-orange;
-    background-color: $bright-orange;
-    border-radius: 4px;
-    .limited { margin-top: 0; margin-right: 1em; }
-    p strong {
-      @extend %feature-font;
-      font-size: 2.5rem;
-    }
-    a {
-      @extend %link-on-orange;
-    }
-    form {
-      margin: 1.5rem 0;
-      p {
-        margin: .5rem 0;
-      }
-      p:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-}
+@import "home/index";
