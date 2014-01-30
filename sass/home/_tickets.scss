@@ -22,6 +22,18 @@
     .extras {
       flex: 1;
       margin-left: 50px;
+      .button {
+        @media only screen and (max-width: 400px) { width: 100%; text-align: center; }
+      }
+    }
+    @media only screen and (max-width: 850px) {
+      flex-flow: column wrap;
+      .prices, .extras { flex: 1; }
+      .extras {
+        margin-top: 30px;
+        margin-left: 0;
+        li { margin-left: 1em; }
+      }
     }
   }
 
@@ -37,6 +49,9 @@
       border-left: none;
       border-top: none;
     }
+    thead th, tbody th {
+      @media only screen and (max-width: 400px) { font-size: 14px; }
+    }
     tbody {
       th {
         text-transform: uppercase;
@@ -50,6 +65,7 @@
           font-size: 21px;
           letter-spacing: 0;
           text-transform: none;
+          @media only screen and (max-width: 400px) { font-size: 13px; }
         }
       }
       td {
@@ -60,7 +76,11 @@
         &:first-letter {
           font-size: 40px;
           vertical-align: super;
+          @media only screen and (max-width: 600px) {font-size: 24px; }
+          @media only screen and (max-width: 400px) { font-size: 12px; }
         }
+        @media only screen and (max-width: 600px) {font-size: 48px; letter-spacing: 0; }
+        @media only screen and (max-width: 400px) { font-size: 24px; letter-spacing: 0; }
       }
     }
     tr.inactive td {

@@ -12,10 +12,12 @@ body.home #conference {
       div { @include responsive-image-container(400px, 208px); }
       img { width: 100%; }
       margin-left: 6%;
-      @media only screen and (max-width: 600px) { float: none; margin: 0 auto 50px auto; width: 90%; }
+      @media only screen and (max-width: 500px) { float: none; margin: 0 auto 50px auto; width: 90%; }
+      @media only screen and (max-width: 400px) { display: none; }
     }
     p {
       font-size: 30px;
+      @media only screen and (max-width: 400px) { font-size: 24px; }
     }
   }
 
@@ -23,6 +25,7 @@ body.home #conference {
     .person-list {
       margin-top: 75px;
       margin-bottom: 50px;
+      @media only screen and (max-width: 400px) { margin-top: 25px; }
     }
   }
 

@@ -63,4 +63,10 @@
   li + li {
     margin-left: 20px;
   }
+
+  @media only screen and (max-width: 400px) {
+    text-align: center;
+    flex-flow: column wrap;
+    li { flex: 1; }
+  }
 }
