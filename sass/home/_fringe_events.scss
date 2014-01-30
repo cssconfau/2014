@@ -73,8 +73,8 @@
     }
 
     header {
-      date, h1, h2 { margin: 0; line-height: 1.2; }
-      date {
+      time, h1, h2 { margin: 0; line-height: 1.2; }
+      time {
         display: block; font-size: 14px; font-weight: 400px; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;
         sup { text-transform: lowercase; }
       }
