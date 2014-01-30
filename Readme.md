@@ -14,7 +14,7 @@ http://2014.cssconf.com.au/
 
 ## Building
 
-* `grunt connect watch`
+* `grunt dev`
 * `open http://localhost:3333/`
 
 ## Releasing
