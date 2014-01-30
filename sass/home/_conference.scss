@@ -12,6 +12,7 @@ body.home #conference {
       div { @include responsive-image-container(400px, 208px); }
       img { width: 100%; }
       margin-left: 6%;
+      @media only screen and (max-width: 600px) { float: none; margin: 0 auto 50px auto; width: 90%; }
     }
     p {
       font-size: 30px;
@@ -35,6 +36,13 @@ body.home #conference {
     }
     > div {
       display: flex;
+      @media only screen and (max-width: 600px) {
+        flex-flow: column wrap;
+        p.submit {
+          flex: 1;
+          a { width: 100%; text-align: center; }
+        }
+      }
       p.about {
         flex: 1;
         margin-right: 20px;

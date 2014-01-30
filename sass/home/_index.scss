@@ -3,6 +3,8 @@ body.home {
   article > section {
     margin: 175px auto;
     position: relative;
+    @media only screen and (max-width: 900px) { margin: 125px auto; }
+    @media only screen and (max-width: 700px) { margin: 100px auto; }
     h2 {
       margin-top: 50px;
       margin-bottom: 15px;
@@ -27,6 +29,8 @@ body.home {
       height: 50px;
       background: transparent url(../images/decorative/line.svg) 0 center no-repeat;
       background-size: 100%;
+      @media only screen and (max-width: 900px) { top: -88px; }
+      @media only screen and (max-width: 700px) { top: -80px; }
     }
   }
 

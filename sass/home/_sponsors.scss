@@ -11,6 +11,7 @@
     right: 6%;
     background: transparent url(../images/illustrations/cloud.svg) no-repeat;
     background-size: 90%;
+    @media only screen and (max-width: 400px) { @include small-section-illo; }
   }
 
 }
