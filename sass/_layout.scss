@@ -80,7 +80,7 @@ body > footer {
       transition-duration: 550ms;
     }
 
-    &:hover {
+    &.active, &:hover {
       &::before {
         transition-delay: 200ms;
         background-position: 0 130%;

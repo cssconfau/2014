@@ -74,5 +74,17 @@
       })();
     </script>
 
+    <script>
+      (function() {
+        if (!document.querySelector) return;
+        window.addEventListener('load', function() {
+          var footer = document.querySelector('body > footer');
+          footer.addEventListener('touchstart', function() {
+            var elem = footer.querySelector('.oh-hai');
+            if (elem.classList) elem.classList.toggle('active');
+          })
+        })
+      })()
+    </script>
   </body>
 </html>
