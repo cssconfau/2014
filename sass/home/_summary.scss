@@ -16,7 +16,7 @@ body.home #summary {
     @media only screen and (max-width: 900px) { width: 45%; }
     @media only screen and (max-width: 700px) { width: 60%; }
     @media only screen and (max-width: 500px) { width: 75%; }
-    @media only screen and (max-width: 350px) { width: 90%; transform: none; }
+    @media only screen and (max-width: 350px) { width: 90%; transform: none; margin-top: -10px; }
     .inner { @include responsive-image-container(1397px, 1080px); }
   }
 }
