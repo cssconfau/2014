@@ -2,14 +2,21 @@
   position: relative;
   text-decoration: none;
   .news-date, .title {
-    line-height: 32px + (25px * 2)
+    line-height: 28px + (10px * 2)
   }
   .news-date {
-    width: 5.5em;
+    width: 6em;
+    padding-right: 15px + 15px;
+    text-align: right;
     display: inline-block;
+    background: transparent url(../images/decorative/line-vertical.svg) center right no-repeat;
+    background-size: 15%;
+    color: $dark-text-color;
+    font-weight: 200;
   }
   .title {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 28px;
+    padding-left: 10px;
+    font-weight: 200;
   }
 }
