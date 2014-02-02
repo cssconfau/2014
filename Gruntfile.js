@@ -15,17 +15,39 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     clean: {
-      css: ['dist/css/*'],
-      html: ['dist/**/*.html']
+      html: ['dist/**/*.html'],
+      css: ['dist/css/*']
     },
     watch: {
-      css: {
-        files: ['sass/**/*.scss'],
-        tasks: ['css']
-      },
       html: {
         files: ['templates/**/*'],
         tasks: ['html']
+      },
+      css: {
+        files: ['sass/**/*.scss'],
+        tasks: ['css']
+      }
+    },
+    assemble: {
+      options: {
+        plugins: ['assemble-contrib-permalinks'],
+        permalinks: { preset: 'pretty' },
+        assets: 'dist',
+        data: 'templates/data/*.json',
+        partials: 'templates/partials/**/*.hbs',
+        helpers: ['helper-moment', 'templates/helpers/*.js'],
+        layoutdir: 'templates/layouts/',
+        layout: 'default-layout.hbs'
+      },
+      site: {
+        files: [
+          {
+            expand: true,
+            cwd: 'templates/pages',
+            src: ['**/*.hbs'],
+            dest: 'dist/',
+          }
+        ]
       }
     },
     sass: {
@@ -108,28 +130,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    assemble: {
-      options: {
-        plugins: ['assemble-contrib-permalinks'],
-        permalinks: { preset: 'pretty' },
-        assets: 'dist',
-        data: 'templates/data/*.json',
-        partials: 'templates/partials/**/*.hbs',
-        helpers: 'templates/helpers/*.js',
-        layoutdir: 'templates/layouts/',
-        layout: 'default-layout.hbs'
-      },
-      site: {
-        files: [
-          {
-            expand: true,
-            cwd: 'templates/pages',
-            src: ['**/*.hbs'],
-            dest: 'dist/',
-          }
-        ]
-      }
-    },
     connect: {
       server: {
         options: {
@@ -141,14 +141,14 @@ module.exports = function(grunt) {
     }
   });
 
-  // Compile CSS
-  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
-
   // Compile HTML pages
   grunt.registerTask('html', ['clean:html', 'assemble']);
 
+  // Compile CSS
+  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
+
   // Default task.
-  grunt.registerTask('default', ['css', 'html']);
+  grunt.registerTask('default', ['html', 'css']);
 
   // Use for development
   grunt.registerTask('dev', ['default', 'connect', 'watch']);
