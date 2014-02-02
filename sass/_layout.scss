@@ -26,7 +26,7 @@ body > header {
   @extend %centered;
   @media only screen and (max-width: 600px) { margin-top: 20px; }
   @media only screen and (max-width: 500px) { flex-flow: column wrap; text-align: center; }
-  .time {
+  .date {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 2px;
