@@ -8,6 +8,6 @@ pageClass: news
 
 <ol>
   {{#eachNewsItem}}
-    <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
+    <li>{{> news-list-item}}</li>
   {{/eachNewsItem}}
 </ol>
