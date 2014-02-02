@@ -2,20 +2,27 @@
 layout: default-layout.hbs
 ---
 
-<article class="news-item {{basename}}">
+<div class="news-item {{basename}}">
 
-  <h1><a href="/news/">News</a></h2>
-
-  <h2>{{title}}</h2>
+  <p class="news"><img src="{{assets}}/images/headings/news.svg" alt="News"></p>
 
   <div class="author">
-    {{#newsAuthor}}
-      {{> person}}
-    {{/newsAuthor}}
   </div>
+
+  <div class="meta">
+    {{#newsAuthor}}{{> person}}{{/newsAuthor}}
+    <p class="date">{{#with date}}<span class="published">Published</span> {{> news-date}}{{/with}}</p>
+  </div>
+
+  <h2 class="title">{{title}}</h2>
 
   <div class="body">
-    {{> body }}
+    {{> body}}
   </div>
 
-</article>
+  <footer>
+    <p class="what"><a href="/">CSSConf Australia</a> is a one-day conference to bring together the designers and developers creating the future face of the web.</p>
+    <p class="sponsors">If your company would like to sponsor CSSConf Australia, shoot an email to <a href="mailto:sponsors@THISDOMAIN">sponsors@THISDOMAIN</a> to find out the details.</p>
+  </footer>
+
+</div>

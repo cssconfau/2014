@@ -1,0 +1,87 @@
+.news-item {
+  @extend %centered;
+
+  > .news {
+    margin: 25px 0 50px 0;
+    padding: 25px 0;
+    background: transparent url(../images/decorative/line.svg) bottom left no-repeat;
+    background-size: 100%;
+    text-align: center;
+    img { height: 60px; }
+  }
+
+  .title { font-size: 48px; margin-top: 5px; font-weight: 600; line-height: 1; }
+
+  .meta {
+    float: right;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    width: 120px;
+    text-align: center;
+    a.person {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      background: transparent url(../images/decorative/line.svg) bottom left no-repeat;
+      background-size: 1000%;
+    }
+    p.date {
+      margin-top: -3px;
+      opacity: .7;
+      .published, .news-date {
+        font-size: 13px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        display: block;
+        text-transform: uppercase;
+      }
+      .published {
+        text-transform: uppercase;
+      }
+      .news-date {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .body {
+    p {
+      margin: 1em 0;
+      max-width: 37em;
+    }
+  }
+
+  footer {
+    background-color: rgba(white, .15);
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    p { margin-left: auto; margin-right: auto; }
+    p.what { font-size: 24px; max-width: 30em; }
+    p.sponsors { font-size: 18px; max-width: 40em; }
+    p + p { margin-top: 10px; }
+  }
+
+  @media only screen and (max-width: 500px) {
+    display: flex;
+    flex-flow: column nowrap;
+    > .news {
+      background-size: 200%;
+    }
+    .meta {
+      order: 2;
+      margin: 50px auto 0 auto;
+    }
+    .body {
+      order: 1;
+    }
+    .button {
+      text-align: center;
+      font-size: 15px;
+    }
+    footer {
+      order: 3;
+      margin-top: 50px;
+    }
+  }
+}

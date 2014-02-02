@@ -17,7 +17,11 @@ html, body, h1, h2, h3, p, ul, ol, li {
 @import "layout";
 
 @import "components/button";
+@import "components/person";
 @import "components/person_list";
+@import "components/news_list";
+@import "components/news_list_item";
+@import "components/news_date";
 
 html {
   font-size: 21px;
@@ -30,4 +34,9 @@ a {
   color: $text-color;
 }
 
+sup {
+  text-transform: lowercase;
+}
+
 @import "home/index";
+@import "news_item";

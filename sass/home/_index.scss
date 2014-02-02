@@ -32,6 +32,8 @@ body.home {
       background-size: 100%;
       @media only screen and (max-width: 900px) { top: -88px; }
       @media only screen and (max-width: 700px) { top: -80px; }
+      @media only screen and (max-width: 600px) { background-size: 250% }
+      @media only screen and (max-width: 350px) { background-size: 325% }
     }
   }
 

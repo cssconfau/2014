@@ -34,9 +34,13 @@
   </head>
   <body class="{{pageClass}}" id="overrides">
 
-    <header>
-      {{#unless hideLogo}}<h1 class="logo"><a href="/"><img src="{{assets}}/images/logo.svg" alt="CSSConf"></a></h1>{{/unless}}
-      <p class="date">April 8–11, 2014</p>
+    <header {{#unless hideLogo}}class="with-logo"{{/unless}}>
+      {{#unless hideLogo}}<h1 class="logo"><a href="/"><img src="{{assets}}/images/logo-without-subhead.svg" alt="CSSConf"></a></h1>{{/unless}}
+      {{#if hideLocationInHeader}}
+        <p class="when"><time datetime="2014-04-08">April 8–11, 2014</time></p>
+      {{else}}
+        <p class="when-where"><time datetime="2014-04-08">April 8–11, 2014</time> <span class="where">Melbourne, Aus</span></p>
+      {{/if}}
       <p class="tickets"><a class="button" href="{{ticketsUrl}}">Purchase tickets</a></p>
     </header>
 
@@ -45,7 +49,9 @@
     </article>
 
     <footer>
-      <div class="oh-hai">&nbsp;</div>
+      <div class="inner">
+        <div class="oh-hai">&nbsp;</div>
+      </div>
     </footer>
 
     <script>

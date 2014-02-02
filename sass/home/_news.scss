@@ -1,3 +1,7 @@
 #news {
   h2 img { height: 85px; }
+
+  @media only screen and (max-width: 500px) {
+    h2 img { margin-bottom: 15px; }
+  }
 }

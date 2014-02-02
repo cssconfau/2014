@@ -88,6 +88,9 @@
     tr.inactive td {
       color: $dark-text-color;
     }
+    tr.sold-out td {
+      text-decoration: line-through;
+    }
   }
 
   .extras {

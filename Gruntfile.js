@@ -15,17 +15,43 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     clean: {
-      css: ['dist/css/*'],
-      html: ['dist/**/*.html']
+      html: ['dist/**/*.html'],
+      css: ['dist/css/*']
     },
     watch: {
+      html: {
+        files: ['templates/**/*'],
+        tasks: ['html']
+      },
       css: {
         files: ['sass/**/*.scss'],
         tasks: ['css']
       },
-      html: {
-        files: ['templates/**/*'],
-        tasks: ['html']
+      svg: {
+        files: ['dist/images/**/*.svg'],
+        tasks: ['svgmin']
+      }
+    },
+    assemble: {
+      options: {
+        plugins: ['assemble-contrib-permalinks'],
+        permalinks: { preset: 'pretty' },
+        assets: 'dist',
+        data: 'templates/data/*.json',
+        partials: 'templates/partials/**/*.hbs',
+        helpers: ['helper-moment', 'templates/helpers/*.js'],
+        layoutdir: 'templates/layouts/',
+        layout: 'default-layout.hbs'
+      },
+      site: {
+        files: [
+          {
+            expand: true,
+            cwd: 'templates/pages',
+            src: ['**/*.hbs'],
+            dest: 'dist/',
+          }
+        ]
       }
     },
     sass: {
@@ -72,6 +98,16 @@ module.exports = function(grunt) {
         dest: 'dist/css/2014.min.css'
       }
     },
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'dist/images',
+          src: ['**/*.svg'],
+          dest: 'dist/images',
+        }]
+      }
+    },
     s3: {
       options: {
         key:    s3Credentials.key,
@@ -108,35 +144,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    assemble: {
-      options: {
-        plugins: ['assemble-contrib-permalinks'],
-        permalinks: { preset: 'pretty' },
-        assets: 'dist',
-        data: 'templates/data/*.json',
-        partials: 'templates/partials/**/*.hbs',
-        helpers: 'templates/helpers/*.js',
-        layoutdir: 'templates/layouts/',
-        layout: 'default-layout.hbs',
-        collections: [
-          {
-            title: 'newsItems',
-            sortby: 'date',
-            sortorder: 'desc'
-          }
-        ]
-      },
-      site: {
-        files: [
-          {
-            expand: true,
-            cwd: 'templates/pages',
-            src: ['**/*.hbs'],
-            dest: 'dist/',
-          }
-        ]
-      }
-    },
     connect: {
       server: {
         options: {
@@ -148,14 +155,14 @@ module.exports = function(grunt) {
     }
   });
 
-  // Compile CSS
-  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
-
   // Compile HTML pages
   grunt.registerTask('html', ['clean:html', 'assemble']);
 
+  // Compile CSS
+  grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
+
   // Default task.
-  grunt.registerTask('default', ['css', 'html']);
+  grunt.registerTask('default', ['html', 'css']);
 
   // Use for development
   grunt.registerTask('dev', ['default', 'connect', 'watch']);

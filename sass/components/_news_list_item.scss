@@ -1,0 +1,48 @@
+.news-list-item {
+  position: relative;
+  text-decoration: none;
+  .news-date, .title {
+    line-height: 28px + (10px * 2)
+  }
+  .news-date {
+    width: 6em;
+    padding-right: 15px + 15px;
+    text-align: right;
+    display: inline-block;
+    background: transparent url(../images/decorative/line-vertical.svg) center right no-repeat;
+    background-size: 15%;
+    color: $dark-text-color;
+    font-weight: 200;
+  }
+  .title {
+    font-size: 28px;
+    padding-left: 10px;
+    font-weight: 200;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .news-date, .title {
+      display: block;
+      margin: 0;
+      line-height: 1;
+    }
+    .news-date {
+      font-size: 18px;
+      font-weight: 200;
+      margin-bottom: 5px;
+      text-transform: none;
+      letter-spacing: 0;
+      opacity: .8;
+      width: auto;
+      padding-right: 0;
+      text-align: left;
+      background: none;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 200;
+      padding-left: 0;
+    }
+  }
+
+}

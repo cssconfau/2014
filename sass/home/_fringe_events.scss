@@ -23,6 +23,8 @@
       height: 50px;
       background: transparent url(../images/decorative/line.svg) 0 center no-repeat;
       background-size: 100%;
+      @media only screen and (max-width: 600px) { background-size: 250% }
+      @media only screen and (max-width: 350px) { background-size: 325% }
     }
 
     &::after {
@@ -32,19 +34,7 @@
       position: absolute;
       top: 10px;
       right: 0;
-      @media only screen and (max-width: 600px) {
-        position: static;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        background-position: bottom center;
-        display: block;
-        margin-left: 50%;
-        transform: translate(-50%);
-        max-width: 100%;
-        background-size: 100%;
-      }
+      @media only screen and (max-width: 600px) { @include small-section-illo; right: auto; max-width: 90%; }
     }
 
     &.zoo::after {
