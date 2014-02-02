@@ -26,6 +26,10 @@ module.exports = function(grunt) {
       css: {
         files: ['sass/**/*.scss'],
         tasks: ['css']
+      },
+      svg: {
+        files: ['dist/images/**/*.svg'],
+        tasks: ['svgmin']
       }
     },
     assemble: {
@@ -94,6 +98,16 @@ module.exports = function(grunt) {
         dest: 'dist/css/2014.min.css'
       }
     },
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'dist/images',
+          src: ['**/*.svg'],
+          dest: 'dist/images',
+        }]
+      }
+    },
     s3: {
       options: {
         key:    s3Credentials.key,
@@ -148,7 +162,7 @@ module.exports = function(grunt) {
   grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
 
   // Default task.
-  grunt.registerTask('default', ['html', 'css']);
+  grunt.registerTask('default', ['html', 'css', 'svgmin']);
 
   // Use for development
   grunt.registerTask('dev', ['default', 'connect', 'watch']);
