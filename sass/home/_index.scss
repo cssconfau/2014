@@ -39,7 +39,7 @@ body.home {
     &::before { display: none; }
   }
 
-  #conference, #tickets, #fringe-events, #sponsors, #team, #contact {
+  #conference, #tickets, #fringe-events, #news, #sponsors, #team, #contact {
     > div { @extend %centered; }
   }
 
@@ -49,6 +49,7 @@ body.home {
 @import "home/conference";
 @import "home/tickets";
 @import "home/fringe_events";
+@import "home/news";
 @import "home/sponsors";
 @import "home/team";
 @import "home/contact";

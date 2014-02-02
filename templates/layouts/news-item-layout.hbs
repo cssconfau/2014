@@ -1,0 +1,21 @@
+---
+layout: default-layout.hbs
+---
+
+<article class="news-item {{basename}}">
+
+  <h1><a href="/news/">News</a></h2>
+
+  <h2>{{title}}</h2>
+
+  <div class="author">
+    {{#newsAuthor}}
+      {{> person}}
+    {{/newsAuthor}}
+  </div>
+
+  <div class="body">
+    {{> body }}
+  </div>
+
+</article>

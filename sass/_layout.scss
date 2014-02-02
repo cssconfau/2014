@@ -24,15 +24,37 @@ body > header {
   background-color: rgba($page-color, 0.5);
   position: relative;
   @extend %centered;
-  @media only screen and (max-width: 600px) { margin-top: 20px; }
-  @media only screen and (max-width: 500px) { flex-flow: column wrap; text-align: center; }
+  .logo {
+    order: 2;
+    width: 25%;
+    margin-top: -30px;
+    img { width: 100%; }
+  }
   .date {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 50px;
+    order: 1;
   }
-  .tickets {}
+  .tickets {
+    order: 3;
+  }
+  @media only screen and (max-width: 650px) {
+    flex-flow: column wrap;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    > * + * { margin-top: 10px; }
+    .logo {
+      order: 1;
+      width: 100%;
+      margin-top: 0;
+      img { width: 75%; }
+    }
+    .date { order: 2; }
+    .tickets { order: 3; }
+  }
 }
 
 body > footer {

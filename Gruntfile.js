@@ -113,9 +113,18 @@ module.exports = function(grunt) {
         plugins: ['assemble-contrib-permalinks'],
         permalinks: { preset: 'pretty' },
         assets: 'dist',
-        layout: 'templates/layouts/default.hbs',
         data: 'templates/data/*.json',
-        partials: 'templates/partials/**/*.hbs'
+        partials: 'templates/partials/**/*.hbs',
+        helpers: 'templates/helpers/*.js',
+        layoutdir: 'templates/layouts/',
+        layout: 'default-layout.hbs',
+        collections: [
+          {
+            title: 'newsItems',
+            sortby: 'date',
+            sortorder: 'desc'
+          }
+        ]
       },
       site: {
         files: [
@@ -123,7 +132,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'templates/pages',
             src: ['**/*.hbs'],
-            dest: 'dist/'
+            dest: 'dist/',
           }
         ]
       }

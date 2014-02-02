@@ -35,6 +35,7 @@
   <body class="{{pageClass}}" id="overrides">
 
     <header>
+      {{#unless hideLogo}}<h1 class="logo"><a href="/"><img src="{{assets}}/images/logo.svg" alt="CSSConf"></a></h1>{{/unless}}
       <p class="date">April 8–11, 2014</p>
       <p class="tickets"><a class="button" href="{{ticketsUrl}}">Purchase tickets</a></p>
     </header>

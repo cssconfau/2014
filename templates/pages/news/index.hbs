@@ -1,14 +1,13 @@
 ---
 title: News
 path: /news
+pageClass: news
 ---
 
-<h1>News index</h1>
+<h1><img src="{{assets}}/images/headings/news.svg" alt="News"></h1>
 
 <ol>
-  {{#each pages}}
-    {{#is data.section "news"}}
-      <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
-    {{/is}}
-  {{/each}}
+  {{#eachNewsItem}}
+    <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
+  {{/eachNewsItem}}
 </ol>

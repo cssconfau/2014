@@ -1,6 +1,8 @@
 ---
 path: /
 pageClass: home
+hideLogo: true
+recentNewsCount: 3
 ---
 
 {{> summary}}
@@ -10,6 +12,10 @@ pageClass: home
 {{> tickets}}
 
 {{> fringe-events}}
+
+{{#if showNews}}
+  {{> news}}
+{{/if}}
 
 {{> sponsors}}
 

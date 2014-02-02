@@ -1,12 +1,18 @@
 <section id="news">
   <div>
-    <h2><img src="{{assets}}/images/headings/news.svg" alt="News"></h2>
+    <h2><a href="/news/"><img src="{{assets}}/images/headings/news.svg" alt="News"></a></h2>
     <ol>
-      {{#each pages}}
-        {{#is data.section "news"}}
-          <li><a href="/news/{{basename}}/">{{data.title}}</a></li>
-        {{/is}}
-      {{/each}}
+      {{#eachRecentNewsItem}}
+        <li>
+          <a href="/news/{{basename}}/">
+            <time class="date" datetime="{{data.date}}">{{formatDate data.date "%d %b"}}</time>
+            <span class="title">{{data.title}}</span>
+          </a>
+        </li>
+      {{/eachRecentNewsItem}}
     </ol>
+    {{#ifMoreNewsItem}}
+      <p class="more"><a href="/news/">Older news…</a></p>
+    {{/ifMoreNewsItem}}
   </div>
 </section>
