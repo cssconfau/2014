@@ -117,14 +117,7 @@ module.exports = function(grunt) {
         partials: 'templates/partials/**/*.hbs',
         helpers: 'templates/helpers/*.js',
         layoutdir: 'templates/layouts/',
-        layout: 'default-layout.hbs',
-        collections: [
-          {
-            title: 'newsItems',
-            sortby: 'date',
-            sortorder: 'desc'
-          }
-        ]
+        layout: 'default-layout.hbs'
       },
       site: {
         files: [
