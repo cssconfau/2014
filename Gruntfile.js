@@ -162,7 +162,7 @@ module.exports = function(grunt) {
   grunt.registerTask('css', ['clean:css', 'sass', 'autoprefixer']);
 
   // Default task.
-  grunt.registerTask('default', ['html', 'css', 'svgmin']);
+  grunt.registerTask('default', ['html', 'css']);
 
   // Use for development
   grunt.registerTask('dev', ['default', 'connect', 'watch']);
