@@ -1,0 +1,15 @@
+.news-list-item {
+  position: relative;
+  text-decoration: none;
+  .news-date, .title {
+    line-height: 32px + (25px * 2)
+  }
+  .news-date {
+    width: 5.5em;
+    display: inline-block;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: 600;
+  }
+}

@@ -15,30 +15,54 @@
   transform: translateX(-50%);
   background-position: bottom center;
   margin-top: 25px;
+  background-size: 100%;
 }
 
 body > header {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: nowrap;
   margin-top: 40px;
   background-color: rgba($page-color, 0.5);
   position: relative;
   @extend %centered;
+  &.with-logo {
+    .tickets { flex: 1; }
+  }
   .logo {
-    order: 2;
-    width: 25%;
-    margin-top: -30px;
+    order: 1;
+    margin-top: -11px;
+    width: 150px;
     img { width: 100%; }
   }
-  .date {
-    line-height: 1;
+  .when {
+    order: 1;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 50px;
-    order: 1;
+  }
+  .when-where {
+    margin-top: 5px;
+    order: 2;
+    text-transform: uppercase;
+    margin-left: 30px;
+    .when, .where {
+      display: block;
+      line-height: 1;
+    }
+    .when {
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+    .where {
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin-top: 1px;
+    }
   }
   .tickets {
     order: 3;
+    flex: 1;
+    text-align: right;
   }
   @media only screen and (max-width: 650px) {
     flex-flow: column wrap;
@@ -52,8 +76,12 @@ body > header {
       margin-top: 0;
       img { width: 75%; }
     }
-    .date { order: 2; }
-    .tickets { order: 3; }
+    .where, .when-where { order: 2; }
+    .when-where { margin-left: 0; margin: 25px 0; }
+    .tickets {
+      order: 3;
+      text-align: inherit;
+    }
   }
 }
 
@@ -61,9 +89,15 @@ body > footer {
   margin-top: 150px;
   background: transparent url(../images/illustrations/footer.svg) center bottom no-repeat;
   background-size: 100%;
-  padding-bottom: (390px/1807px) * 100%;
+  $background-image-ratio: 390px/1807px;
+  padding-bottom: $background-image-ratio * 100%;
   position: relative;
-  @media only screen and (max-width: 500px) { margin-top: 50px; }
+  @media only screen and (max-width: 500px) {
+    margin-top: 50px;
+    width: 250%;
+    padding-bottom: $background-image-ratio * 300%;
+    overflow: hidden;
+  }
   .oh-hai {
     width: 100%;
     margin-bottom: 2.3%;

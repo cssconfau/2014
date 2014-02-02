@@ -21,6 +21,7 @@
     "grunt-invalidate-cloudfront": "~0.1.4",
     "assemble": "~0.4.35",
     "assemble-contrib-permalinks": "~0.3.3",
+    "moment": "~2.5.1",
     "helper-moment": "~0.1.3"
   }
 }

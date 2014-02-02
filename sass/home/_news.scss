@@ -1,3 +1,26 @@
 #news {
   h2 img { height: 85px; }
+
+  @media only screen and (max-width: 500px) {
+    h2 img { margin-bottom: 15px; }
+    .news-list-item {
+      .news-date, .title {
+        display: block;
+        margin: 0;
+        line-height: 1;
+      }
+      .news-date {
+        font-size: 18px;
+        font-weight: 200;
+        margin-bottom: 5px;
+        text-transform: none;
+        letter-spacing: 0;
+        opacity: .8;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 200;
+      }
+    }
+  }
 }
