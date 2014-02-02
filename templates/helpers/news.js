@@ -1,14 +1,13 @@
-var _ = require('lodash');
-
 module.exports.register = function (Handlebars, options, params)  {
 
-  var recentLimit = 3;
+  var recentLimit = 3,
+      newsLayoutFilename = 'news-item-layout.hbs';
 
   function newsPages() {
-    return _(options.pages).
-      filter(function(page) { return page.layout == 'news.hbs' }).
+    return options.pages.
+      filter(function(page) { return page.data.layout == newsLayoutFilename }).
       filter(function(page) { return !page.data.hideFromIndex }).
-      sortBy(function(page) { return page.date });
+      sort(function(a, b)   { return b.date - a.date });
   }
 
   function recentNewsPages() {
@@ -16,8 +15,11 @@ module.exports.register = function (Handlebars, options, params)  {
   }
 
   function teamMemberForName(name) {
-    return _(options.data.team).
-      find(function(member) { return name == member.name; });
+    for (var i in options.data.team) {
+      var member = options.data.team[i];
+      if (member.name == name)
+        return member;
+    }
   }
 
   Handlebars.registerHelper('eachNewsItem', function (helperOptions)  {
