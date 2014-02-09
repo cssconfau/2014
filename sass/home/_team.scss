@@ -1,3 +1,33 @@
+@keyframes sunny-drop {
+  from { transform: scale(.1) rotate(-90deg); opacity: 0; }
+  to { transform: scale(1) rotate(-3deg); opacity: 1; }
+}
+
 #team {
   h2 img { height: 85px; }
+
+  .benschwarz .photo::after { top: 35%; left: 24%; background-size: 60% 60%; }
+  .mobywhale .photo::after { top: 29%; left: 32%; background-size: 50% 50%; }
+  .xzyfer .photo::after { top: 41%; left: 24%; }
+
+  .benschwarz, .mobywhale, .xzyfer {
+    .photo {
+      position: relative;
+      &::after {
+        content: ' ';
+        background: transparent url(../images/decorative/sunnies.png) 0 0 no-repeat;
+        background-size: 65% 65%;
+        width: 124px;
+        height: 44px;
+        position: absolute;
+        z-index: 2;
+        display: block;
+        animation: sunny-drop .35s cubic-bezier(0.840, 0.020, 0.000, 1.630) forwards;
+        animation-play-state: paused;
+        pointer-events: none;
+        transform-origin: center center;
+      }
+    }
+    .photo:hover::after { animation-play-state: running; }
+  }
 }
