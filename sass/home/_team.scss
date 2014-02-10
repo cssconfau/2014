@@ -1,6 +1,5 @@
 @keyframes sunny-drop {
-  from { transform: scale(.1) rotate(-90deg); opacity: 0; }
-  75%  { opacity: .75; }
+  from { transform: scale(0) rotate(-90deg); opacity: 0; }
   to   { transform: scale(1) rotate(-4deg); opacity: 1; }
 }
 
@@ -19,7 +18,9 @@
         position: absolute;
         z-index: 2;
         display: block;
-        animation: sunny-drop .2s cubic-bezier(0.840, 0.020, 0.000, 1.630) forwards paused;
+        animation: sunny-drop .2s cubic-bezier(0.840, 0.020, 0.000, 1.630) forwards;
+        // Safari doesn't like play state being we put in the line above ^^^
+        animation-play-state: paused;
         pointer-events: none;
         transform-origin: 15% 80%;
       }
