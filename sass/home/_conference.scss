@@ -23,9 +23,9 @@ body.home #conference {
 
   .speakers {
     .person-list {
-      margin-top: 75px;
-      margin-bottom: 50px;
-      @media only screen and (max-width: 400px) { margin-top: 25px; }
+      margin-top: 35px;
+      margin-bottom: 25px;
+      @media only screen and (max-width: 400px) { margin-top: 0; }
     }
   }
 

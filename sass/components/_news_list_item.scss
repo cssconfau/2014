@@ -1,23 +1,30 @@
 .news-list-item {
+  $font-size: 28px;
   position: relative;
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
   .news-date, .title {
-    line-height: 28px + (10px * 2)
+    line-height: $font-size + (10px * 2)
   }
   .news-date {
-    width: 6em;
-    padding-right: 15px + 15px;
+    width: 5em;
+    margin-right: 15px;
     text-align: right;
     display: inline-block;
-    background: transparent url(../images/decorative/line-vertical.svg) center right no-repeat;
-    background-size: 15%;
     color: $dark-text-color;
     font-weight: 200;
   }
   .title {
-    font-size: 28px;
-    padding-left: 10px;
+    font-size: $font-size;
     font-weight: 200;
+  }
+
+  + .news-list-item {
+    margin-top: -10px;
+    padding-top: 20px;
+    background: transparent url(../images/decorative/line.svg) top left no-repeat;
+    background-size: 135%;
   }
 
   @media only screen and (max-width: 500px) {
@@ -36,12 +43,14 @@
       width: auto;
       padding-right: 0;
       text-align: left;
-      background: none;
     }
     .title {
       font-size: 24px;
       font-weight: 200;
       padding-left: 0;
+    }
+    + .news-list-item {
+      margin-top: 0;
     }
   }
 

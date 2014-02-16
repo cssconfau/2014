@@ -3,6 +3,5 @@
   "eventDescription": "A one day conference bringing together the designers and developers of the future of the web.",
   "rootUrl":          "http://2014.cssconf.com.au/",
   "ticketsUrl":       "https://ti.to/cssconf-au/2014",
-  "cfpUrl":           "https://cssconfau.wufoo.com/forms/cssconf-au-2014-call-for-presentations/",
-  "showNews":         true
+  "cfpUrl":           "https://cssconfau.wufoo.com/forms/cssconf-au-2014-call-for-presentations/"
 }

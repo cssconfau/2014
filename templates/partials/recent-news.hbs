@@ -3,7 +3,7 @@
     <h2><img src="{{assets}}/images/headings/news.svg" alt="News"></h2>
     <ol class="news-list">
       {{#eachRecentNewsItem}}
-        <li>{{> news-list-item}}</li>
+        {{> news-list-item}}
       {{/eachRecentNewsItem}}
     </ol>
     {{#ifMoreNewsItem}}
