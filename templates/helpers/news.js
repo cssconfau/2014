@@ -7,7 +7,8 @@ module.exports.register = function (Handlebars, options, params)  {
     return options.pages.
       filter(function(page) { return page.data.layout == newsLayoutFilename }).
       filter(function(page) { return !page.data.hideFromIndex }).
-      sort(function(a, b)   { return b.date - a.date });
+      sort(function(a, b)   { return b.date - a.date }).
+      reverse();
   }
 
   function recentNewsPages() {
