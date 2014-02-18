@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         plugins: ['assemble-contrib-permalinks'],
-        permalinks: { preset: 'pretty' },
+        // permalinks: { preset: 'pretty' },
         assets: 'dist',
         data: 'templates/data/*.json',
         partials: 'templates/partials/**/*.hbs',
