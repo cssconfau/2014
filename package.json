@@ -4,6 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "devDependencies": {
+    "strings": "0.1.4",
     "grunt": "0.4.2",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-csslint": "~0.1.2",
