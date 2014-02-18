@@ -5,12 +5,14 @@ http://2014.cssconf.com.au/
 ## Dependencies
 
 * Node
-* Sass (`gem install sass`)
+* Sass
 
 ## Installing
 
 * `npm install -g grunt-cli`
 * `npm install`
+* `gem install bundle`
+* `bundle install`
 
 ## Building
 
