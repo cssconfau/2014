@@ -1,0 +1,93 @@
+body.home #schedule {
+
+  $circle-radius: 7.5px;
+  $offset: 30px;
+  $off-white: rgba(255, 255, 255, 0.6);
+
+  header {
+    margin-bottom: 1.5em;
+  }
+
+  .schedule__title,
+  .schedule__tagline {
+    text-align: center;
+    margin: 0;
+  }
+
+  .schedule__tagline {
+    color: $off-white;
+    font-size: 14px;
+    max-width: none; // reset style
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-around;
+
+    @media only screen and (max-width: 700px) {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .schedule__morning,
+  .schedule__afternoon {
+    display: table;
+
+  }
+
+  .schedule__item {
+    list-style-type: none;
+    margin: 0;
+
+    &.schedule__item--minor {
+      color: $off-white;
+    }
+  }
+
+  .schedule__item__time,
+  .schedule__item__description {
+    display: table-cell;
+    vertical-align: top;
+    padding: $offset 30px 0;
+  }
+
+  .schedule__item__time {
+    border-right: 1px solid #fff;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: $offset;
+      right: -$circle-radius;
+      width: $circle-radius * 2;
+      height: $circle-radius * 2;
+      border-radius: 100%;
+      border: 1px solid #fff;
+      background-color: $orange;
+    }
+  }
+
+  .schedule__item__title,
+  .schedule__item__byline {
+    display: block;
+    margin: 0;
+  }
+
+  .schedule__item__time,
+  .schedule__item__byline {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .schedule__item__title {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .schedule__item__byline {
+    line-height: 2;
+  }
+}
