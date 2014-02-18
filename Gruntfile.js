@@ -56,6 +56,9 @@ module.exports = function(grunt) {
     },
     sass: {
       main: {
+        options: {
+          bundleExec: true
+        },
         files: {
           'dist/css/2014.css': 'sass/2014.scss'
         }
