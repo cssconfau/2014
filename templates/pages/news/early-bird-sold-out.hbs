@@ -12,7 +12,9 @@ layout: news-item-layout.hbs
 
 <p>If you didn’t get hold of an early bird ticket, never fear! Everyone who submits a talk proposal (by Friday 21 February) will be eligible for the early bird pricing, regardless of whether your proposal is accepted.</p>
 
-<p><a class="button" href="{{cfpUrl}}">Submit a talk proposal</a></p>
+{{#if cfpOpen}}
+  <p><a class="button" href="{{cfpUrl}}">Submit a talk proposal</a></p>
+{{/if}}
 
 <p>Now’s the time to talk about that cool thing you did a few months back, or perhaps nudge someone you know who would be great to have as a speaker.</p>
 
