@@ -24,5 +24,10 @@
     "name": "Tab Atkins",
     "twitter": "tabatkins",
     "photo": "speakers/tab.jpg"
+  },
+  {
+    "name": "Lea Verou",
+    "twitter": "leaverou",
+    "photo": "speakers/lea.jpg"
   }
 ]
