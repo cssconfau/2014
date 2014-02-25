@@ -1,6 +1,7 @@
 body.home #schedule {
 
   $circle-radius: 7.5px;
+  $circle-border-width: 1px;
   $offset: 30px;
   $off-white: rgba(255, 255, 255, 0.6);
 
@@ -48,22 +49,27 @@ body.home #schedule {
     padding: $offset 30px 0;
   }
 
+  .schedule__item__description.schedule__item__description--without-byline {
+    padding-bottom: $offset;
+  }
+
   .schedule__item__time {
     border-right: 1px solid #fff;
     position: relative;
     width: 9em;
     text-align: right;
+    line-height: 24px;
 
     &:after {
       display: block;
       content: " ";
       position: absolute;
-      top: $offset;
-      right: -$circle-radius;
+      top: $offset + 2px;
+      right: -$circle-radius - 1 * $circle-border-width;
       width: $circle-radius * 2;
       height: $circle-radius * 2;
       border-radius: 100%;
-      border: 1px solid #fff;
+      border: $circle-border-width solid #fff;
       background-color: $orange;
     }
   }
@@ -104,6 +110,10 @@ body.home #schedule {
 
     .schedule__item__time {
       width: 50%;
+    }
+
+    .schedule__item__description.schedule__item__description--without-byline {
+      padding-bottom: 0;
     }
   }
 }
