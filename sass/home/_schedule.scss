@@ -23,20 +23,16 @@ body.home #schedule {
   > div {
     display: flex;
     justify-content: space-around;
-
-    @media only screen and (max-width: 700px) {
-      align-items: center;
-      flex-direction: column;
-    }
   }
 
   .schedule__morning,
   .schedule__afternoon {
     display: table;
-
+    table-layout: fixed;
   }
 
   .schedule__item {
+    display: table-row;
     list-style-type: none;
     margin: 0;
 
@@ -55,6 +51,8 @@ body.home #schedule {
   .schedule__item__time {
     border-right: 1px solid #fff;
     position: relative;
+    width: 9em;
+    text-align: right;
 
     &:after {
       display: block;
@@ -89,5 +87,22 @@ body.home #schedule {
 
   .schedule__item__byline {
     line-height: 2;
+  }
+
+  @media only screen and (max-width: 700px) {
+    > div {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .schedule__morning,
+    .schedule__afternoon {
+      width: 80%;
+      table-layout: auto;
+    }
+
+    .schedule__item__time {
+      width: 50%;
+    }
   }
 }
