@@ -41,7 +41,7 @@ body.home {
     &::before { display: none; }
   }
 
-  #conference, #tickets, #fringe-events, #news, #sponsors, #team, #contact {
+  #conference, #tickets, #fringe-events, #news, #sponsors, #team, #contact, #schedule {
     > div { @extend %centered; }
   }
 
@@ -55,3 +55,4 @@ body.home {
 @import "home/sponsors";
 @import "home/team";
 @import "home/contact";
+@import "home/schedule";
