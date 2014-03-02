@@ -29,5 +29,10 @@
     "name": "Lea Verou",
     "twitter": "leaverou",
     "photo": "speakers/lea.jpg"
+  },
+  {
+    "name": "Chris Eppstein",
+    "twitter": "chriseppstein",
+    "photo": "speakers/chris.jpg"
   }
 ]
