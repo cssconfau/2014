@@ -1,12 +1,20 @@
 .news-list-item {
   $font-size: 28px;
   position: relative;
+
+  &.more {
+    padding-left: 5em;
+    margin-left: 20px;
+  }
+
   a {
     text-decoration: none;
   }
-  .news-date, .title {
+
+  .news-date, .title, &.more {
     line-height: $font-size + (10px * 2)
   }
+
   .news-date {
     width: 5em;
     margin-right: 15px;
@@ -15,6 +23,7 @@
     color: $dark-text-color;
     font-weight: 200;
   }
+
   .title {
     font-size: $font-size;
     font-weight: 200;
@@ -28,6 +37,10 @@
   }
 
   @media only screen and (max-width: 500px) {
+    &.more {
+      padding-left: 0;
+      margin-left: 0;
+    }
     .news-date, .title {
       display: block;
       margin: 0;

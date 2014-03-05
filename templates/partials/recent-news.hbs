@@ -5,9 +5,9 @@
       {{#eachRecentNewsItem}}
         {{> news-list-item}}
       {{/eachRecentNewsItem}}
+      {{#ifMoreNewsItem}}
+        <li class="more news-list-item"><a href="/news/">Older news…</a></p>
+      {{/ifMoreNewsItem}}
     </ol>
-    {{#ifMoreNewsItem}}
-      <p class="more"><a href="/news/">Older news…</a></p>
-    {{/ifMoreNewsItem}}
   </div>
 </section>

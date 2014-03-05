@@ -4,8 +4,20 @@
 
   ul { list-style: none; }
   li {
-    display: inline-block; padding-right: 8%; width: 42%; vertical-align: middle;
+    display: inline-block; padding-right: 6%; width: 35%; vertical-align: middle;
     &.ninety-nine-designs img { width: 79%; }
+
+  }
+
+  @media only screen and (max-width: 700px) {
+    li { width: 44%; }
+  }
+
+  @media only screen and (max-width: 550px) {
+    li {
+      display: block; width: 60%; padding-right: 0; margin: auto; text-align: center;
+      + li { margin-top: 20px; }
+    }
   }
 
   p.more {
