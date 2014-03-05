@@ -2,6 +2,16 @@
 
   h2 img { height: 115px; }
 
+  ul { list-style: none; }
+  li {
+    display: inline-block; padding-right: 8%; width: 42%; vertical-align: middle;
+    &.ninety-nine-designs img { width: 79%; }
+  }
+
+  p.more {
+    margin-top: 30px;
+  }
+
   &::after {
     content: ' ';
     width: 211px;
