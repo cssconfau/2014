@@ -3,10 +3,21 @@
   h2 img { height: 115px; }
 
   .logos {
-    width: 75%;
+    width: 75%; margin: 50px 0;
     ul {
       list-style: none;
-      + ul { margin-top: 50px; }
+      padding-bottom: 25px;
+      background: transparent url(../images/decorative/line.svg) bottom left no-repeat;
+      background-size: 135%;
+      &:first-of-type {
+        margin-top: -30px;
+        padding-top: 25px + 20px;
+        background-repeat: no-repeat, no-repeat;
+        background-image: url(../images/decorative/line.svg), url(../images/decorative/line.svg);
+        background-position: bottom left, top left;
+      }
+
+      + ul { margin-top: 30px; }
       li {
         display: inline-block; vertical-align: middle;
       }
@@ -39,7 +50,7 @@
     }
   }
 
-  p.more {
+  p {
     margin-top: 30px;
   }
 
