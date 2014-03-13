@@ -2,21 +2,40 @@
 
   h2 img { height: 115px; }
 
-  ul { list-style: none; }
-  li {
-    display: inline-block; padding-right: 6%; width: 35%; vertical-align: middle;
-    &.ninety-nine-designs img { width: 79%; }
-
-  }
-
-  @media only screen and (max-width: 700px) {
-    li { width: 44%; }
-  }
-
-  @media only screen and (max-width: 550px) {
-    li {
-      display: block; width: 60%; padding-right: 0; margin: auto; text-align: center;
-      + li { margin-top: 20px; }
+  .logos {
+    width: 75%;
+    ul {
+      list-style: none;
+      + ul { margin-top: 50px; }
+      li {
+        display: inline-block; vertical-align: middle;
+      }
+      &.primary li {
+        width: 95%;
+      }
+      &.medium li {
+        width: 50%;
+        &.envato img { width: 85%; }
+      }
+      &.community li {
+        width: 30%;
+        + li { margin-left: 4%; }
+      }
+    }
+    @media only screen and (max-width: 600px) { width: 90%; text-align: center; }
+    @media only screen and (max-width: 400px) {
+      width: 100%; text-align: center;
+      ul {
+        + ul { margin-top: 25px; }
+        li {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        &.community {
+          li + li { margin-left: auto; margin-top: 10px; }
+        }
+      }
     }
   }
 
