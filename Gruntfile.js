@@ -28,7 +28,11 @@ module.exports = function(grunt) {
         tasks: ['css']
       },
       svg: {
-        files: ['dist/images/**/*.svg'],
+        files: [
+          'dist/images/**/*.svg',
+          // Pin logo gets munged, so let's leave sponsor logos untouched
+          '!dist/images/sponsor-logos/*'
+        ],
         tasks: ['svgmin']
       }
     },
