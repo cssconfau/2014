@@ -34,5 +34,15 @@
     "name": "Chris Eppstein",
     "twitter": "chriseppstein",
     "photo": "speakers/chris.jpg"
+  },
+  {
+    "name": "Christopher Giffard",
+    "twitter": "cgiffard",
+    "photo": "speakers/chrisg.jpg"
+  },
+  {
+    "name": "Connor Sears",
+    "twitter": "connors",
+    "photo": "speakers/connors.jpg"
   }
 ]
