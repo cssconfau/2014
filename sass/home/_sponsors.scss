@@ -26,27 +26,35 @@
       }
       &.medium li {
         width: 50%;
-        &.envato img { width: 85%; }
+        &.envato img { width: 80%; }
+      }
+      &.small li {
+        width: 45%;
+        + li { margin-left: 3.5%; }
+        &.pin img { width: 80%; margin-top: -1%; }
       }
       &.community li {
-        width: 30%;
-        + li { margin-left: 4%; }
+        width: 20%;
+        + li { margin-left: 3.5%; }
       }
     }
     @media only screen and (max-width: 600px) { width: 90%; text-align: center; }
     @media only screen and (max-width: 400px) {
       width: 100%; text-align: center;
-      ul {
+      ul.primary, ul.medium, ul.small, ul.community {
         + ul { margin-top: 25px; }
         li {
           display: block;
           margin-left: auto;
           margin-right: auto;
-        }
-        &.community {
-          li + li { margin-left: auto; margin-top: 10px; }
+          & + li { margin-left: auto; margin-top: 10px; }
         }
       }
+      ul.medium li { width: 60%; }
+      ul.small li { width: 65%; }
+      ul.small li.realestate img { width: 100%; }
+      ul.small li.pin img { width: 75%; }
+      ul.community li { width: 30%; }
     }
   }
 
