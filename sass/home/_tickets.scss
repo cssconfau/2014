@@ -88,7 +88,7 @@
     tr.inactive td {
       color: $dark-text-color;
     }
-    tr.sold-out td {
+    .sold-out {
       text-decoration: line-through;
     }
   }
