@@ -85,7 +85,7 @@
         @media only screen and (max-width: 400px) { font-size: 24px; letter-spacing: 0; }
       }
     }
-    tr.inactive td {
+    .inactive, .sold-out {
       color: $dark-text-color;
     }
     .sold-out {
