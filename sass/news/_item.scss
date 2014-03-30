@@ -86,4 +86,8 @@
       margin-top: 50px;
     }
   }
+
+  @media only screen and (max-width: 1000px) {
+    li { margin-left: 1em; }
+  }
 }
