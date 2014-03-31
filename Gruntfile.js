@@ -147,7 +147,16 @@ module.exports = function(grunt) {
           cwd: './dist/',
           src: ['**/*'],
           filter: 'isFile',
-          dest: ''
+          rename: function(dest, src, options) {
+            var renamedSrc = src;
+
+            // Strip index.html (i.e. invalidate / not /index.html)
+            var trailingIndexMatch = /index\.html$/;
+            if (renamedSrc.match(trailingIndexMatch))
+              renamedSrc = renamedSrc.replace(trailingIndexMatch, '');
+
+            return renamedSrc;
+          },
         }]
       }
     },
