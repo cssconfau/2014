@@ -145,8 +145,17 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: './dist/',
+          dest: '',
           src: ['**/*'],
-          filter: 'isFile',
+          filter: 'isFile'
+        }]
+      },
+      rewrittenIndexFiles: {
+        files: [{
+          expand: true,
+          cwd: './dist/',
+          dest: '',
+          src: ['**/index.html'],
           rename: function(dest, src, options) {
             var renamedSrc = src;
 
