@@ -64,15 +64,12 @@
 
     header {
       time, h1, h2 { margin: 0; line-height: 1.2; }
-      time {
-        display: block; font-size: 14px; font-weight: 400px; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;
-        sup { text-transform: lowercase; }
-      }
+      time { display: block; font-size: 14px; font-weight: 400px; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px; }
       h1   {
-        font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 0;
+        font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: .15em;
         a { text-decoration: none; }
       }
-      h2   { font-size: 24px; font-weight: 800; text-transform: uppercase; }
+      h2   { font-size: 21px; font-weight: 600; text-transform: uppercase; }
     }
     p {
       font-size: 18px;
