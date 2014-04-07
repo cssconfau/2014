@@ -94,10 +94,11 @@ body.home #schedule {
   }
 
   .schedule__item__byline {
-    margin-top: .5em;
+    margin-top: .3em;
     line-height: 1.5;
     min-height: 1.5em;
     font-weight: 400;
+    color: $off-white;
   }
 
   @media only screen and (max-width: 700px) {
@@ -114,10 +115,6 @@ body.home #schedule {
 
     .schedule__item__time, .schedule__item__description {
       width: 50%;
-    }
-
-    .schedule__item.schedule__item--minor .schedule__item__description {
-      padding-bottom: 0;
     }
 
   }
