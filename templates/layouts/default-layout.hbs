@@ -41,10 +41,13 @@
       {{else}}
         <p class="when-where"><time datetime="2014-04-09">April 9, 2014</time> <span class="where">Melbourne, Aus</span></p>
       {{/if}}
-      <p class="tickets">
-        {{!-- <a class="button" href="{{ticketsUrl}}">Purchase tickets</a> --}}
-        <a class="button" href="/#schedule">Schedule</a>
-      </p>
+      {{#if showActionButtonInHeader}}
+        <p class="tickets">
+          {{!-- <a class="button" href="{{ticketsUrl}}">Purchase tickets</a> --}}
+          {{!-- <a class="button" href="/#schedule">Schedule</a> --}}
+          <a class="button" href="/news/thank-you/">Thank You</a>
+        </p>
+      {{/if}}
     </header>
 
     <article>
