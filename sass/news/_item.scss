@@ -50,7 +50,17 @@
         margin: 2em 0;
       }
     }
-    img { max-width: 100%; }
+    .news-photo {
+      width: 100%;
+      max-width: 900px;
+      img {
+        width: 100%;
+      }
+    }
+    .thank-you-gif {
+      width: 100%;
+      max-width: 750px;
+    }
   }
 
   footer {
