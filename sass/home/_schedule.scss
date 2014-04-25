@@ -47,6 +47,10 @@ body.home #schedule {
     }
   }
 
+  .schedule__item__video {
+    text-decoration: none;
+  }
+
   .schedule__item__time,
   .schedule__item__description {
     display: table-cell;
