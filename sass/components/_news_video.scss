@@ -5,7 +5,7 @@
       font-size: 1.4em;
       .news-video__title__link { text-decoration: none; border-bottom: 1px solid white; }
     }
-    .news-video__description { margin-top: .75em; }
+    .news-video__description p:first-child { margin-top: .75em; }
     .news-video__embed-wrapper {
       position: relative;
       padding-bottom: (315px / 560px) * 100%;
