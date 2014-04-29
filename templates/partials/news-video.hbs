@@ -1,11 +1,11 @@
 <div class="news-video">
   <h2 class="news-video__title">
-    <a class="news-video__title__link" href="https://www.youtube.com/watch?v={{this.id}}">{{this.title}}</a>
+    <a class="news-video__title__link" href="https://www.youtube.com/watch?v={{this.id}}&list=PLZriQCloF6GDEOUPK7tlaWAtJhPW21ZDF">{{this.title}}</a>
   </h2>
   <div class="news-video__description">
     {{#markdown}}{{this.description}}{{/markdown}}
   </div>
   <div class="news-video__embed-wrapper">
-    <iframe class="news-video__embed-wrapper__embed" width="560" height="315" src="//www.youtube-nocookie.com/embed/{{this.id}}?rel=0" frameborder="0" allowfullscreen title="{{this.title}}"></iframe>
+    <iframe class="news-video__embed-wrapper__embed" width="560" height="315" src="//www.youtube-nocookie.com/embed/{{this.id}}?rel=0&list=PLZriQCloF6GDEOUPK7tlaWAtJhPW21ZDF" frameborder="0" allowfullscreen title="{{this.title}}"></iframe>
   </div>
 </div>
