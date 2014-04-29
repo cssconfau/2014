@@ -1,0 +1,48 @@
+---
+title: Talk videos now available
+date: 2014-04-29
+path: /news/videos
+author: Tim Lucas
+layout: news-item-layout.hbs
+videos:
+- id: ltT1qNBg8QE
+  title: "Nicole Sullivan - Opening Keynote"
+  description: "The story of how CSSConf came to be, how you can be involved, the intersection of design and development, carpentry and dance dance revolution, and why you should follow your heart (and f*ck your career)."
+- id: 0NFct2yOfiI
+  title: "Chris Wright - Surprise and delight: CSS + SVG"
+  description: "How to use SVG and CSS to bring elements of storytelling into your designs, avoiding mistakes from the past (”Animate all the things!“), and tricks for cross-browser animation."
+- id: m0oMHG6ZXvo
+  title: "Nicolas Gallagher - Adaptation and Components"
+  description: "The importance of adapatibility over reusability, what makes a component, organising components, and how to apply the component model using tools such as [React](https://facebook.github.io/react/), [Component](http://component.io/) and [SUIT](https://suitcss.github.io/)."
+- id: S2HAgA_TqL4
+  title: "Connor Sears - Better Production Decisions with HTML & CSS"
+  description: "How to bring your design process closer to the code, how it helps to elevate design conversations, and experiences at Twitter and Github for using web-based tools (such as [Ratchet](http://goratchet.com/), [Framer](http://www.framerjs.com/), and [to be named]) to design native applications."
+- id: ZxdeuAP027Y
+  title: "Ana Tudor - 3D Transforms and Poly… What?"
+  description: "A mind-bending guide to building (and [exploding](http://codepen.io/thebabydino/full/yehGi)) a rhombic dodecahedron and [other polyhedra](http://codepen.io/collection/eErLu/) using only HTML, CSS transforms and a little bit of math."
+- id: G4UJnHM8NNs
+  title: "Christopher Giffard - Test Your CSS with CSS"
+  description: "Using CSS as a declarative language for code quality analysis, uptime monitoring, and accessibility testing using [Behaviour Assertion Sheets](http://bas.cgiffard.com/), and ideas and techniques for building your own declarative CSS-based tools."
+- id: qqbZBnLVn74
+  title: "Lea Verou - The Chroma Zone"
+  description: "An in-depth look at how colour works on screen, sub-pixels, the history of HTML and CSS colour (orange!), filters, blend modes, colour perception, currentColor, and up-coming CSS Level 4 features."
+- id: jPOBVaomzLE
+  title: "Simurai - Styling with Strings"
+  description: "Designing HTML components directly in the browser (without a preprocessor) using CSS properties such as currentColor, EMs, REMs, and flexbox."
+- id: 1x5woAGT5h4
+  title: "Chris Eppstein - What makes Sass so Syntactically Awesome?"
+  description: "Reflections on the success of [Sass](http://sass-lang.com/), how it evolved, useful abstractions, the importance of allowing hand-crafted output, listening to community feedback, attention to error cases, features that don't belong in Sass, and how you can contribute."
+- id: uo-4EnALlrA
+  title: "Speaker Q&A Panel"
+  description: "The final session of CSSConf Australia 2014: an open Q&A with all the speakers."
+---
+
+{{#markdown}}
+
+We're excited to announce that the entire 10 hours of talks by our amazing speakers are [now available to watch online](https://www.youtube.com/playlist?list=PLZriQCloF6GDEOUPK7tlaWAtJhPW21ZDF). If you were lucky enough to be there, we hope you enjoy reliving the day. If you weren't able to make it, we're glad we can make these available, and we hope to see you next year :)
+
+{{/markdown}}
+
+{{#each videos}}
+  {{> news-video}}
+{{/each}}
