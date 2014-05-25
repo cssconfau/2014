@@ -26,12 +26,6 @@ body.home #schedule {
     justify-content: space-around;
   }
 
-  .schedule__morning,
-  .schedule__afternoon {
-    display: table;
-    table-layout: fixed;
-  }
-
   .schedule__item {
     display: table-row;
     list-style-type: none;
@@ -113,12 +107,16 @@ body.home #schedule {
 
     .schedule__morning,
     .schedule__afternoon {
-      width: 80%;
+      width: 100%;
+      display: table;
       table-layout: auto;
     }
 
-    .schedule__item__time, .schedule__item__description {
-      width: 50%;
+    .schedule__item__time {
+      width: 30%;
+    }
+    .schedule__item__description {
+      width: 70%;
     }
 
   }
