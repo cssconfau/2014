@@ -25,6 +25,8 @@ http://2014.cssconf.com.au/
 
 ## License
 
-The MIT License (MIT)
+The files in `2014/dist/fonts` are copyright and are not allowed to be used without license from [MyFonts](https://www.myfonts.com/fonts/typetanic-fonts/transat/)
+
+All other files are MIT License (MIT)
 
 Copyright (c) 2013 Fiona Chan, Michael Mifsud, Ben Schwarz, Glen Maddern, Tim Lucas
